@@ -1,6 +1,17 @@
-import React from "react";
+import { useState } from "react";
+import { X, ChevronDown, MapPin, Headset } from "lucide-react";
+import { NAV_ITEMS } from "@/data/navItems";
+import Link from "next/link";
 
-export default function MobileDrawer() {
+export default function MobileDrawer({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) {
+  const [accordionOpen, setAccordionOpen] = useState(false);
+
   return (
     <>
       <div
@@ -18,12 +29,12 @@ export default function MobileDrawer() {
         <div>
           <div className="flex items-center justify-between border-b border-white/10 p-6">
             <span className="font-heading text-lg font-semibold text-white tracking-wider">
-              {tCommon("menu")}
+              Menú
             </span>
             <button
               onClick={onClose}
               className="cursor-pointer text-white/70 transition-colors hover:text-primary"
-              aria-label={tCommon("close_menu")}
+              aria-label="Cerrar menú"
             >
               <X className="h-6 w-6" />
             </button>
@@ -32,7 +43,7 @@ export default function MobileDrawer() {
           <nav className="flex flex-col space-y-4 p-6">
             {NAV_ITEMS.map((item) => (
               <div
-                key={item.labelKey}
+                key={item.label}
                 className="border-b border-white/10 pb-4"
               >
                 {item.children ? (
@@ -41,7 +52,7 @@ export default function MobileDrawer() {
                       onClick={() => setAccordionOpen((v) => !v)}
                       className="flex w-full cursor-pointer items-center justify-between font-heading text-base text-white tracking-wider transition-colors hover:text-primary"
                     >
-                      <span>{t(item.labelKey)}</span>
+                      <span>{item.label}</span>
                       <ChevronDown
                         className={`h-5 w-5 transition-transform duration-200 ${
                           accordionOpen ? "rotate-180" : ""
@@ -54,23 +65,25 @@ export default function MobileDrawer() {
                       }`}
                     >
                       {item.children.map((child) => (
-                        <a
-                          key={child.labelKey}
-                          href={`/${locale}${child.href}`}
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          onClick={onClose}
                           className="block font-heading text-sm text-white/70 tracking-wider transition-colors hover:text-primary"
                         >
-                          {t(child.labelKey)}
-                        </a>
+                          {child.label}
+                        </Link>
                       ))}
                     </div>
                   </div>
                 ) : (
-                  <a
-                    href={`/${locale}${item.href}`}
+                  <Link
+                    href={item.href}
+                    onClick={onClose}
                     className="block font-heading text-base text-white tracking-wider transition-colors hover:text-primary"
                   >
-                    {t(item.labelKey)}
-                  </a>
+                    {item.label}
+                  </Link>
                 )}
               </div>
             ))}
@@ -80,13 +93,11 @@ export default function MobileDrawer() {
         <div className="space-y-3 border-t border-white/10 bg-black/40 p-6 font-heading text-xs text-white tracking-wider sm:text-sm">
           <div className="flex items-center gap-2">
             <MapPin className="h-4 w-4 shrink-0 text-primary" />
-            <span>{tCommon("location")}</span>
+            <span>Cusco, Perú</span>
           </div>
           <div className="flex items-center gap-2">
             <Headset className="h-4 w-4 shrink-0 text-primary" />
-            <span className="font-semibold">
-              {tTopbar("reservations")} {tCommon("phone")}
-            </span>
+            <span className="font-semibold">Reservas: +51 123 456 789</span>
           </div>
         </div>
       </aside>

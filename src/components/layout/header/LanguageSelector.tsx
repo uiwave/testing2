@@ -1,6 +1,13 @@
 import { LANGUAGE_OPTIONS } from "@/data/language";
 import { ChevronDown } from "lucide-react";
-import React from "react";
+
+const LANG_NAMES: Record<string, string> = {
+  es: "Español",
+  en: "English",
+  pt: "Português",
+};
+
+const DEFAULT_LOCALE = "es";
 
 export default function LanguageSelector({
   langOpen,
@@ -11,6 +18,9 @@ export default function LanguageSelector({
   setLangOpen: React.Dispatch<React.SetStateAction<boolean>>;
   onSwitchLocale: (code: string) => void;
 }) {
+  const locale = DEFAULT_LOCALE;
+  const currentLang = LANGUAGE_OPTIONS.find((l) => l.code === locale);
+
   return (
     <div
       className="relative flex h-20 items-center"
@@ -48,7 +58,7 @@ export default function LanguageSelector({
                 </span>
               </div>
               <span className="text-[10px] font-normal opacity-75 sm:text-xs">
-                {tLang(lang.code)}
+                {LANG_NAMES[lang.code]}
               </span>
             </button>
           ))}

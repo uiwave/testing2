@@ -4,18 +4,25 @@ import { cn } from "cn";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import TopBar from "./TopBar";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import DesktopNavigation from "./DesktopNavigation";
 import LanguageSelector from "./LanguageSelector";
+import MobileDrawer from "./MobileDrawer";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const switchLocale = useCallback((_code: string) => {
+    // no-op: i18n se implementará más adelante
   }, []);
 
   return (
@@ -31,7 +38,10 @@ export function Header() {
         <div className="uw-container">
           <div className="grid h-20 w-full grid-cols-3 items-center">
             <div className="flex items-center justify-start">
-              <button className="inline-flex h-11 cursor-pointer items-center justify-center text-primary transition-colors hover:text-white xl:hidden">
+              <button
+                onClick={() => setDrawerOpen(true)}
+                className="inline-flex h-11 cursor-pointer items-center justify-center text-primary transition-colors hover:text-white xl:hidden"
+              >
                 <Menu className="h-7 w-7 shrink-0" />
               </button>
               <DesktopNavigation />
@@ -55,6 +65,8 @@ export function Header() {
           </div>
         </div>
       </header>
+
+      <MobileDrawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </>
   );
 }
