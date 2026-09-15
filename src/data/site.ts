@@ -31,7 +31,6 @@ export const socialList: SocialLink[] = [
   },
 ];
 
-
 // Mapa para acceso individual
 export const socialMap = Object.fromEntries(
   socialList.map((item) => [item.id, item]),

@@ -14,9 +14,9 @@ export default function ContactInfoSection() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-6">
-              <div className="flex items-start gap-4 rounded-2xl bg-card border border-border p-5">
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                  <MapPin className="size-5 text-primary" />
+              <div className="bg-card border-border flex items-start gap-4 rounded-2xl border p-5">
+                <div className="bg-primary/10 flex size-10 shrink-0 items-center justify-center rounded-full">
+                  <MapPin className="text-primary size-5" />
                 </div>
                 <div>
                   <h3 className="font-heading text-lg tracking-wider text-white">
@@ -25,9 +25,9 @@ export default function ContactInfoSection() {
                   <p className="mt-1">{CONTACT_INFO.address}</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 rounded-2xl bg-card border border-border p-5">
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                  <Phone className="size-5 text-primary" />
+              <div className="bg-card border-border flex items-start gap-4 rounded-2xl border p-5">
+                <div className="bg-primary/10 flex size-10 shrink-0 items-center justify-center rounded-full">
+                  <Phone className="text-primary size-5" />
                 </div>
                 <div>
                   <h3 className="font-heading text-lg tracking-wider text-white">
@@ -36,9 +36,9 @@ export default function ContactInfoSection() {
                   <p className="mt-1">{CONTACT_INFO.phone}</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 rounded-2xl bg-card border border-border p-5">
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                  <Mail className="size-5 text-primary" />
+              <div className="bg-card border-border flex items-start gap-4 rounded-2xl border p-5">
+                <div className="bg-primary/10 flex size-10 shrink-0 items-center justify-center rounded-full">
+                  <Mail className="text-primary size-5" />
                 </div>
                 <div>
                   <h3 className="font-heading text-lg tracking-wider text-white">
@@ -47,9 +47,9 @@ export default function ContactInfoSection() {
                   <p className="mt-1">{CONTACT_INFO.email}</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 rounded-2xl bg-card border border-border p-5">
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                  <Clock className="size-5 text-primary" />
+              <div className="bg-card border-border flex items-start gap-4 rounded-2xl border p-5">
+                <div className="bg-primary/10 flex size-10 shrink-0 items-center justify-center rounded-full">
+                  <Clock className="text-primary size-5" />
                 </div>
                 <div>
                   <h3 className="font-heading text-lg tracking-wider text-white">
@@ -62,7 +62,7 @@ export default function ContactInfoSection() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <form className="flex flex-col gap-5 rounded-2xl bg-card border border-border p-6 sm:p-8">
+            <form className="bg-card border-border flex flex-col gap-5 rounded-2xl border p-6 sm:p-8">
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div className="flex flex-col gap-2">
                   <label
@@ -76,7 +76,7 @@ export default function ContactInfoSection() {
                     id="name"
                     required
                     placeholder="Tu nombre"
-                    className="rounded-lg bg-background border border-border px-4 py-3 text-sm text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                    className="bg-background border-border focus:border-primary focus:ring-primary/20 rounded-lg border px-4 py-3 text-sm text-white focus:ring-2 focus:outline-none"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -91,7 +91,7 @@ export default function ContactInfoSection() {
                     id="email"
                     required
                     placeholder="Tu correo electrónico"
-                    className="rounded-lg bg-background border border-border px-4 py-3 text-sm text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                    className="bg-background border-border focus:border-primary focus:ring-primary/20 rounded-lg border px-4 py-3 text-sm text-white focus:ring-2 focus:outline-none"
                   />
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function ContactInfoSection() {
                   type="tel"
                   id="phone"
                   placeholder="Tu teléfono"
-                  className="rounded-lg bg-background border border-border px-4 py-3 text-sm text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  className="bg-background border-border focus:border-primary focus:ring-primary/20 rounded-lg border px-4 py-3 text-sm text-white focus:ring-2 focus:outline-none"
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -121,12 +121,12 @@ export default function ContactInfoSection() {
                   required
                   rows={5}
                   placeholder="Cuéntanos sobre tu viaje ideal..."
-                  className="resize-none rounded-lg bg-background border border-border px-4 py-3 text-sm text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  className="bg-background border-border focus:border-primary focus:ring-primary/20 resize-none rounded-lg border px-4 py-3 text-sm text-white focus:ring-2 focus:outline-none"
                 />
               </div>
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-heading text-sm tracking-wider text-primary-foreground transition-opacity hover:opacity-90"
+                className="bg-primary font-heading text-primary-foreground inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm tracking-wider transition-opacity hover:opacity-90"
               >
                 Enviar mensaje
                 <Send className="size-4" />

@@ -20,13 +20,13 @@ export default function PopularToursSection() {
           opts={{
             align: "start",
           }}
-          className="w-full relative"
+          className="relative w-full"
         >
           <CarouselContent>
             {TOURS.map((tour) => (
               <CarouselItem
                 key={tour.slug}
-                className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                className="basis-full pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
                 <TourCard data={tour} />
               </CarouselItem>

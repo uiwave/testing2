@@ -27,10 +27,10 @@ export default function ToursGrid() {
               key={dest}
               onClick={() => setActiveFilter(dest)}
               className={cn(
-                "cursor-pointer rounded-lg px-5 py-2.5 font-heading text-sm tracking-wider transition-all",
+                "font-heading cursor-pointer rounded-lg px-5 py-2.5 text-sm tracking-wider transition-all",
                 activeFilter === dest
                   ? "bg-primary text-primary-foreground"
-                  : "bg-card border border-border text-white hover:border-primary hover:text-primary",
+                  : "bg-card border-border hover:border-primary hover:text-primary border text-white",
               )}
             >
               {dest}

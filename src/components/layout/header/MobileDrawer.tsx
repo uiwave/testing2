@@ -22,18 +22,18 @@ export default function MobileDrawer({
       />
 
       <aside
-        className={`fixed bottom-0 left-0 top-0 z-50 flex w-[85%] max-w-sm flex-col justify-between border-r border-white/10 bg-black transition-transform duration-300 ease-in-out xl:hidden ${
+        className={`fixed top-0 bottom-0 left-0 z-50 flex w-[85%] max-w-sm flex-col justify-between border-r border-white/10 bg-black transition-transform duration-300 ease-in-out xl:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div>
           <div className="flex items-center justify-between border-b border-white/10 p-6">
-            <span className="font-heading text-lg font-semibold text-white tracking-wider">
+            <span className="font-heading text-lg font-semibold tracking-wider text-white">
               Menú
             </span>
             <button
               onClick={onClose}
-              className="cursor-pointer text-white/70 transition-colors hover:text-primary"
+              className="hover:text-primary cursor-pointer text-white/70 transition-colors"
               aria-label="Cerrar menú"
             >
               <X className="h-6 w-6" />
@@ -42,15 +42,12 @@ export default function MobileDrawer({
 
           <nav className="flex flex-col space-y-4 p-6">
             {NAV_ITEMS.map((item) => (
-              <div
-                key={item.label}
-                className="border-b border-white/10 pb-4"
-              >
+              <div key={item.label} className="border-b border-white/10 pb-4">
                 {item.children ? (
                   <div>
                     <button
                       onClick={() => setAccordionOpen((v) => !v)}
-                      className="flex w-full cursor-pointer items-center justify-between font-heading text-base text-white tracking-wider transition-colors hover:text-primary"
+                      className="font-heading hover:text-primary flex w-full cursor-pointer items-center justify-between text-base tracking-wider text-white transition-colors"
                     >
                       <span>{item.label}</span>
                       <ChevronDown
@@ -69,7 +66,7 @@ export default function MobileDrawer({
                           key={child.label}
                           href={child.href}
                           onClick={onClose}
-                          className="block font-heading text-sm text-white/70 tracking-wider transition-colors hover:text-primary"
+                          className="font-heading hover:text-primary block text-sm tracking-wider text-white/70 transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -80,7 +77,7 @@ export default function MobileDrawer({
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className="block font-heading text-base text-white tracking-wider transition-colors hover:text-primary"
+                    className="font-heading hover:text-primary block text-base tracking-wider text-white transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -90,13 +87,13 @@ export default function MobileDrawer({
           </nav>
         </div>
 
-        <div className="space-y-3 border-t border-white/10 bg-black/40 p-6 font-heading text-xs text-white tracking-wider sm:text-sm">
+        <div className="font-heading space-y-3 border-t border-white/10 bg-black/40 p-6 text-xs tracking-wider text-white sm:text-sm">
           <div className="flex items-center gap-2">
-            <MapPin className="h-4 w-4 shrink-0 text-primary" />
+            <MapPin className="text-primary h-4 w-4 shrink-0" />
             <span>Cusco, Perú</span>
           </div>
           <div className="flex items-center gap-2">
-            <Headset className="h-4 w-4 shrink-0 text-primary" />
+            <Headset className="text-primary h-4 w-4 shrink-0" />
             <span className="font-semibold">Reservas: +51 123 456 789</span>
           </div>
         </div>

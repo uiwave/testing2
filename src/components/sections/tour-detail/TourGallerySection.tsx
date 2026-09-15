@@ -11,11 +11,7 @@ export default function TourGallerySection({ tour }: Props) {
   return (
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section pt-0">
-        <Heading
-          centered
-          badge="Galería"
-          title="Momentos de la aventura"
-        />
+        <Heading centered badge="Galería" title="Momentos de la aventura" />
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {tour.images.map((img, i) => (
             <div

@@ -1,4 +1,8 @@
-export const FacebookIcon = ({ className = "size-5" }: { className?: string }) => (
+export const FacebookIcon = ({
+  className = "size-5",
+}: {
+  className?: string;
+}) => (
   <svg
     role="img"
     viewBox="0 0 24 24"

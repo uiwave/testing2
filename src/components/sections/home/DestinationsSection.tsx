@@ -9,22 +9,26 @@ import {
 
 export const DESTINATIONS: Destination[] = [
   {
-    slug: "/ica",
+    id: 1,
+    slug: "ica",
     image: "/images/Tour-Huacachina-Buggy-Sandboarding-02.webp",
     title: "Ica",
   },
   {
-    slug: "/puno",
+    id: 2,
+    slug: "puno",
     image: "/images/puno.webp",
     title: "Puno",
   },
   {
-    slug: "/cusco",
+    id: 3,
+    slug: "cusco",
     image: "/images/Tour-a-Machu-Picchu-03.webp",
     title: "Cusco",
   },
   {
-    slug: "/arequipa",
+    id: 4,
+    slug: "arequipa",
     image: "/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp",
     title: "Arequipa",
   },
@@ -45,13 +49,13 @@ export default function DestinationsSection() {
           opts={{
             align: "start",
           }}
-          className="w-full relative"
+          className="relative w-full"
         >
           <CarouselContent>
             {DESTINATIONS.map((destination) => (
               <CarouselItem
-                key={destination.slug}
-                className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                key={destination.id}
+                className="basis-full pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
                 <DestinationCard data={destination} />
               </CarouselItem>

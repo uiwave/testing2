@@ -3,19 +3,16 @@ import { Target, Heart, Globe } from "lucide-react";
 
 const VALUES = [
   {
-    icon: Target,
     title: "Misión",
     description:
       "Ofrecer experiencias de viaje auténticas y seguras en Perú, conectando a los viajeros con la cultura, la naturaleza y las personas que hacen de este país un destino único en el mundo.",
   },
   {
-    icon: Heart,
     title: "Pasión",
     description:
       "Cada tours es planeado con dedicación y amor por los detalles. Nos importa que cada momento de tu viaje sea memorable y supere tus expectativas.",
   },
   {
-    icon: Globe,
     title: "Compromiso",
     description:
       "Trabajamos con comunidades locales promoviendo el turismo sostenible y responsable, asegurando que nuestras actividades beneficien a las personas y el entorno.",
@@ -27,10 +24,10 @@ export default function MissionSection() {
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-10">
-          <div className="relative mx-auto w-full max-w-130 aspect-4/5 sm:aspect-4/3 lg:aspect-3/4">
-            <div className="absolute -inset-3 -rotate-2 rounded-4xl bg-primary/10" />
-            <div className="absolute inset-0 rotate-1 rounded-2xl border border-primary/50" />
-            <div className="relative h-full w-full overflow-hidden rounded-2xl shadow-2xl shadow-black/50 ring-1 ring-white/10">
+          <div className="relative mx-auto aspect-4/5 w-full max-w-130 sm:aspect-4/3 lg:aspect-3/4">
+            <div className="bg-primary/10 absolute -inset-3 -rotate-2 rounded-4xl" />
+            <div className="border-primary/50 absolute inset-0 rotate-1 rounded-2xl border" />
+            <div className="relative h-full w-full overflow-hidden rounded-2xl shadow-2xl ring-1 shadow-black/50 ring-white/10">
               <img
                 src="/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp"
                 alt="Cañón del Colca"
@@ -42,22 +39,20 @@ export default function MissionSection() {
 
           <div className="flex flex-col items-start gap-8">
             <Heading
+              centered
               badge="Nuestra esencia"
               title="Por qué elegir Chullpi Expeditions"
               description="Somos más que una agencia de viajes. Somos tu puerta de entrada a la verdadera magia de Perú."
-              className="text-start mb-0"
+              className="mb-0 text-start lg:mb-0"
             />
-            <div className="flex flex-col gap-6 w-full">
+            <div className="flex w-full flex-col gap-6">
               {VALUES.map((value) => (
                 <div
                   key={value.title}
-                  className="flex items-start gap-4 pl-4 border-l-2 border-primary"
+                  className="border-primary flex items-start gap-4 border-l-2 pl-4"
                 >
-                  <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <value.icon className="size-5 text-primary" />
-                  </div>
                   <div className="flex flex-col gap-1">
-                    <h3 className="font-heading sm:text-2xl tracking-wider text-white">
+                    <h3 className="font-heading tracking-wider text-white sm:text-2xl">
                       {value.title}
                     </h3>
                     <p className="text-base">{value.description}</p>

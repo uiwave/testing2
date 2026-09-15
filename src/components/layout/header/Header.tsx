@@ -29,7 +29,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed left-0 right-0 top-0 z-50 border-b border-white/10 transition-all duration-300",
+          "fixed top-0 right-0 left-0 z-50 border-b border-white/10 transition-all duration-300",
           scrolled ? "bg-background shadow-lg" : "bg-black/20 backdrop-blur-md",
         )}
       >
@@ -40,7 +40,7 @@ export function Header() {
             <div className="flex items-center justify-start">
               <button
                 onClick={() => setDrawerOpen(true)}
-                className="inline-flex h-11 cursor-pointer items-center justify-center text-primary transition-colors hover:text-white xl:hidden"
+                className="text-primary inline-flex h-11 cursor-pointer items-center justify-center transition-colors hover:text-white xl:hidden"
               >
                 <Menu className="h-7 w-7 shrink-0" />
               </button>

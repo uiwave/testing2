@@ -28,16 +28,16 @@ export function Heading({
           "flex flex-col gap-6",
           centered
             ? "items-center"
-            : "xl:flex-row justify-between items-start xl:items-end",
+            : "items-start justify-between xl:flex-row xl:items-end",
         )}
       >
         <h2
           className={cn(
-            "font-heading text-white leading-[0.95] ",
+            "font-heading leading-[0.95] text-white",
             centered ? "w-full" : "xl:w-1/2",
           )}
         >
-          <span className="block font-decoration text-primary text-[clamp(1.5rem,0.5rem+3.5vw,3rem)] leading-none mb-1">
+          <span className="font-decoration text-primary mb-1 block text-[clamp(1.5rem,0.5rem+3.5vw,3rem)] leading-none">
             {badge}
           </span>
           <span className="block text-[clamp(1.875rem,-0.5rem+6vw,4.5rem)]">
@@ -45,9 +45,7 @@ export function Heading({
           </span>
         </h2>
         {description && (
-          <p className={cn(centered ? "" : "xl:w-[38%]")}>
-            {description}
-          </p>
+          <p className={cn(centered ? "" : "xl:w-[38%]")}>{description}</p>
         )}
       </div>
     </div>

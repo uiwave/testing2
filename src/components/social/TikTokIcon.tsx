@@ -1,4 +1,8 @@
-export const TikTokIcon = ({ className = "size-5" }: { className?: string }) => (
+export const TikTokIcon = ({
+  className = "size-5",
+}: {
+  className?: string;
+}) => (
   <svg
     role="img"
     viewBox="0 0 24 24"

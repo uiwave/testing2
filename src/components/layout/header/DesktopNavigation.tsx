@@ -9,11 +9,11 @@ export default function DesktopNavigation() {
         {NAV_ITEMS.map((item) => (
           <div
             key={item.label}
-            className="group relative flex h-20 cursor-pointer items-center gap-2 text-white transition-colors hover:text-primary"
+            className="group hover:text-primary relative flex h-20 cursor-pointer items-center gap-2 text-white transition-colors"
           >
             <Link
               href={item.href}
-              className="font-heading leading-[0.95] tracking-normal text-[clamp(0.938rem,0.804rem+0.335vw,1.125rem)] flex items-center gap-2"
+              className="font-heading flex items-center gap-2 text-[clamp(0.938rem,0.804rem+0.335vw,1.125rem)] leading-[0.95] tracking-normal"
             >
               {item.label}
             </Link>
@@ -22,12 +22,12 @@ export default function DesktopNavigation() {
             )}
 
             {item.children && (
-              <div className="absolute left-0 top-20 z-50 hidden w-64 flex-col overflow-hidden bg-white shadow-xl group-hover:flex">
+              <div className="absolute top-20 left-0 z-50 hidden w-64 flex-col overflow-hidden bg-white shadow-xl group-hover:flex">
                 {item.children.map((child) => (
                   <Link
                     key={child.label}
                     href={child.href}
-                    className="px-5 py-3.5 text-[clamp(0.9375rem,calc(0.85rem+0.35vw),1.125rem)] font-heading leading-6.5 text-black tracking-wider transition-colors hover:bg-primary hover:text-white"
+                    className="font-heading hover:bg-primary px-5 py-3.5 text-[clamp(0.9375rem,calc(0.85rem+0.35vw),1.125rem)] leading-6.5 tracking-wider text-black transition-colors hover:text-white"
                   >
                     {child.label}
                   </Link>

@@ -10,9 +10,9 @@ export default function TourCard({ data }: Props) {
   return (
     <Link
       href={`/tours/${data.slug}`}
-      className="group flex flex-col w-full overflow-hidden rounded-2xl bg-card border border-border p-5 gap-3 h-full"
+      className="group bg-card border-border flex h-full w-full flex-col gap-3 overflow-hidden rounded-2xl border p-5"
     >
-      <span className="text-center font-heading text-[3.125rem] leading-none tracking-widest text-primary mb-3.75">
+      <span className="font-heading text-primary mb-3.75 text-center text-[3.125rem] leading-none tracking-widest">
         {data.destination}
       </span>
 
@@ -28,15 +28,15 @@ export default function TourCard({ data }: Props) {
         {data.title}
       </h3>
 
-      <p className="text-base mt-auto">
-        <span className="font-heading text-white text-2xl">${data.price}</span>{" "}
+      <p className="mt-auto text-base">
+        <span className="font-heading text-2xl text-white">${data.price}</span>{" "}
         Persona
       </p>
 
-      <div className="border-t border-border" />
+      <div className="border-border border-t" />
 
-      <span className="font-heading text-white inline-flex items-center gap-2">
-        <Clock className="size-4 text-primary" />
+      <span className="font-heading inline-flex items-center gap-2 text-white">
+        <Clock className="text-primary size-4" />
         {data.duration}
       </span>
     </Link>

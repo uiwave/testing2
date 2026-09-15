@@ -15,36 +15,36 @@ export default function TourInfoSection({ tour }: Props) {
             <Heading
               badge={tour.destination}
               title={tour.title}
-              className="text-start mb-0"
+              className="mb-0 text-start"
             />
             <p className="mt-6 text-base leading-relaxed">{tour.description}</p>
           </div>
-          <div className="flex flex-col gap-4 rounded-2xl bg-card border border-border p-6">
+          <div className="bg-card border-border flex flex-col gap-4 rounded-2xl border p-6">
             <h3 className="font-heading text-xl tracking-wider text-white">
               Resumen del tour
             </h3>
-            <div className="flex items-center gap-3 border-b border-border pb-4">
-              <DollarSign className="size-5 shrink-0 text-primary" />
+            <div className="border-border flex items-center gap-3 border-b pb-4">
+              <DollarSign className="text-primary size-5 shrink-0" />
               <div>
-                <span className="text-xs text-muted-foreground">Precio</span>
+                <span className="text-muted-foreground text-xs">Precio</span>
                 <p className="font-heading text-2xl text-white">
                   ${tour.price} <span className="text-sm">Persona</span>
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-3 border-b border-border pb-4">
-              <Clock className="size-5 shrink-0 text-primary" />
+            <div className="border-border flex items-center gap-3 border-b pb-4">
+              <Clock className="text-primary size-5 shrink-0" />
               <div>
-                <span className="text-xs text-muted-foreground">Duración</span>
+                <span className="text-muted-foreground text-xs">Duración</span>
                 <p className="font-heading text-lg text-white">
                   {tour.duration}
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-3 border-b border-border pb-4">
-              <Signal className="size-5 shrink-0 text-primary" />
+            <div className="border-border flex items-center gap-3 border-b pb-4">
+              <Signal className="text-primary size-5 shrink-0" />
               <div>
-                <span className="text-xs text-muted-foreground">
+                <span className="text-muted-foreground text-xs">
                   Dificultad
                 </span>
                 <p className="font-heading text-lg text-white">
@@ -53,11 +53,9 @@ export default function TourInfoSection({ tour }: Props) {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="size-5 shrink-0 text-primary" />
+              <MapPin className="text-primary size-5 shrink-0" />
               <div>
-                <span className="text-xs text-muted-foreground">
-                  Destino
-                </span>
+                <span className="text-muted-foreground text-xs">Destino</span>
                 <p className="font-heading text-lg text-white">
                   {tour.destination}
                 </p>

@@ -20,13 +20,13 @@ export default function TestimonialsSection() {
           opts={{
             align: "start",
           }}
-          className="w-full relative"
+          className="relative w-full"
         >
           <CarouselContent>
             {TESTIMONIALS.map((testimonial) => (
               <CarouselItem
                 key={testimonial.name}
-                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                className="basis-full pl-4 sm:basis-1/2 lg:basis-1/3"
               >
                 <TestimonialCard data={testimonial} />
               </CarouselItem>

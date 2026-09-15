@@ -69,11 +69,7 @@ export const TOURS: Tour[] = [
       "45 minutos de sandboarding",
       "Seguro básico",
     ],
-    notIncludes: [
-      "Almuerzo",
-      "Propinas",
-      "Gastos personales",
-    ],
+    notIncludes: ["Almuerzo", "Propinas", "Gastos personales"],
   },
   {
     slug: "puno-lago-titicaca",

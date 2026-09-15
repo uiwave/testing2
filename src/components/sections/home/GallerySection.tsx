@@ -27,20 +27,20 @@ export default function GallerySection() {
         />
       </div>
 
-      <div className="relative group w-full overflow-hidden">
+      <div className="group relative w-full overflow-hidden">
         <img
           src="/images/bg/gelary-sp1.png"
           alt=""
-          className="absolute top-0 left-0 z-10 w-full h-14 object-cover object-bottom pointer-events-none"
+          className="pointer-events-none absolute top-0 left-0 z-10 h-14 w-full object-cover object-bottom"
         />
         <img
           src="/images/bg/gelary-sp2.png"
           alt=""
-          className="absolute bottom-0 left-0 z-10 w-full h-14 object-cover object-top pointer-events-none"
+          className="pointer-events-none absolute bottom-0 left-0 z-10 h-14 w-full object-cover object-top"
         />
 
         <div
-          className="flex w-max h-[40vh] sm:h-[45vh] gap-5 marquee-track"
+          className="marquee-track flex h-[40vh] w-max gap-5 sm:h-[45vh]"
           style={{
             animationPlayState: stopScroll ? "paused" : "running",
             animationDuration: `${galleryImages.length * 3000}ms`,
@@ -49,7 +49,7 @@ export default function GallerySection() {
           {[...galleryImages, ...galleryImages].map((image, index) => (
             <figure
               key={`${image}-${index}`}
-              className="relative shrink-0 w-70 sm:w-[320px] md:w-90 h-full overflow-hidden rounded-2xl bg-card border border-border"
+              className="bg-card border-border relative h-full w-70 shrink-0 overflow-hidden rounded-2xl border sm:w-[320px] md:w-90"
             >
               <img
                 src={image}
