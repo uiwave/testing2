@@ -9,7 +9,7 @@ interface Props {
 export default function TourCard({ data }: Props) {
   return (
     <Link
-      href={data.slug}
+      href={`/tours/${data.slug}`}
       className="group flex flex-col w-full overflow-hidden rounded-2xl bg-card border border-border p-5 gap-3 h-full"
     >
       <span className="text-center font-heading text-[3.125rem] leading-none tracking-widest text-primary mb-3.75">
@@ -29,7 +29,7 @@ export default function TourCard({ data }: Props) {
       </h3>
 
       <p className="text-base mt-auto">
-        <span className="font-heading text-white text-2xl">{data.price}</span>{" "}
+        <span className="font-heading text-white text-2xl">${data.price}</span>{" "}
         Persona
       </p>
 

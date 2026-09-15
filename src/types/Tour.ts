@@ -1,3 +1,9 @@
+export interface TourItinerary {
+  day: number;
+  title: string;
+  description: string;
+}
+
 export interface Tour {
   slug: string;
   destination: string;
@@ -5,4 +11,10 @@ export interface Tour {
   title: string;
   price: number;
   duration: string;
+  description?: string;
+  difficulty?: string;
+  images?: string[];
+  itinerary?: TourItinerary[];
+  includes?: string[];
+  notIncludes?: string[];
 }

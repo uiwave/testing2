@@ -3,14 +3,14 @@ import { NavItem } from "@/types/NavItem";
 export const NAV_ITEMS: NavItem[] = [
   {
     label: "destinos",
-    href: "#",
+    href: "/tours",
     children: [
-      { label: "Cusco", href: "#" },
-      { label: "Arequipa", href: "#" },
-      { label: "Puno", href: "#" },
-      { label: "Ica", href: "#" },
+      { label: "Cusco", href: "/tours" },
+      { label: "Arequipa", href: "/tours" },
+      { label: "Puno", href: "/tours" },
+      { label: "Ica", href: "/tours" },
     ],
   },
-  { label: "nosotros", href: "#" },
-  { label: "contacto", href: "#" },
+  { label: "nosotros", href: "/sobre-nosotros" },
+  { label: "contacto", href: "/contacto" },
 ];
