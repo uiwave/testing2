@@ -12,6 +12,8 @@ interface Props {
 }
 
 export default function PopularToursSection({ tours }: Props) {
+  const popularTours = tours.filter((tour) => tour.popular);
+
   return (
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section pb-0">
@@ -27,7 +29,7 @@ export default function PopularToursSection({ tours }: Props) {
           className="relative w-full"
         >
           <CarouselContent>
-            {tours.map((tour) => (
+            {popularTours.map((tour) => (
               <CarouselItem
                 key={tour.slug}
                 className="basis-full pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"

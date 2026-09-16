@@ -4,5 +4,6 @@
   "image": "/images/Tour-a-Machu-Picchu-03.webp",
   "title": "Machu Picchu",
   "price": 300,
-  "duration": "Full Day"
+  "duration": "Full Day",
+  "popular": true
 }

@@ -4,5 +4,6 @@
   "image": "/images/puno.webp",
   "title": "Ilhas Flutuantes de Uros",
   "price": 100,
-  "duration": "Full Day"
+  "duration": "Full Day",
+  "popular": false
 }

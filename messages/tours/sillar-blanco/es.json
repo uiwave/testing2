@@ -4,5 +4,6 @@
   "image": "/images/Tours-Salinas-y-ruta-del-Sillar-Culebrillas-02.webp",
   "title": "Ruta del Sillar Blanco",
   "price": 110,
-  "duration": "Full Day"
+  "duration": "Full Day",
+  "popular": false
 }

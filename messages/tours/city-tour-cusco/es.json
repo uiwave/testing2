@@ -4,5 +4,6 @@
   "image": "/images/City-Tour-Cusco-03.webp",
   "title": "City Tour Cusco",
   "price": 60,
-  "duration": "Half Day"
+  "duration": "Half Day",
+  "popular": false
 }

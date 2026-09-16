@@ -4,5 +4,6 @@
   "image": "/images/puno.webp",
   "title": "Floating Islands of Uros",
   "price": 100,
-  "duration": "Full Day"
+  "duration": "Full Day",
+  "popular": false
 }

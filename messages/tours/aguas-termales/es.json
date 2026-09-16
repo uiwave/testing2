@@ -4,5 +4,6 @@
   "image": "/images/Ascenso-al-volcan-Chachani-01.webp",
   "title": "Aguas Termales de La Calera",
   "price": 90,
-  "duration": "Half Day"
+  "duration": "Half Day",
+  "popular": false
 }

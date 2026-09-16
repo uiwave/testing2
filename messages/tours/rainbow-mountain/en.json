@@ -4,5 +4,6 @@
   "image": "/images/Montana-de-colores-06.webp",
   "title": "Vinicunca Rainbow Mountain",
   "price": 180,
-  "duration": "Full Day"
+  "duration": "Full Day",
+  "popular": true
 }

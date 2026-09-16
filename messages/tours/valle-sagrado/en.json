@@ -4,5 +4,6 @@
   "image": "/images/Tour-De-Medio-Dia-Ollantaytambo-03.webp",
   "title": "Sacred Valley",
   "price": 200,
-  "duration": "Full Day"
+  "duration": "Full Day",
+  "popular": true
 }

@@ -4,5 +4,6 @@
   "image": "/images/Tour-Huacachina-Buggy-Sandboarding-03.webp",
   "title": "Wineries Route",
   "price": 70,
-  "duration": "Half Day"
+  "duration": "Half Day",
+  "popular": false
 }

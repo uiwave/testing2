@@ -11,6 +11,7 @@ export interface Tour {
   title: string;
   price: number;
   duration: string;
+  popular: boolean;
   description?: string;
   difficulty?: string;
   images?: string[];
