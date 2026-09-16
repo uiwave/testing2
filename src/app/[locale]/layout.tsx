@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { setRequestLocale } from "next-intl/server";
 import { bebasNeue, inter, satisfy } from "@/lib/fonts";
 
 type Props = {
@@ -21,8 +20,6 @@ export default async function RootLayout({ children, params }: Props) {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-
-  setRequestLocale(locale);
 
   return (
     <html

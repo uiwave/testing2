@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X, ChevronDown, MapPin, Headset } from "lucide-react";
 import { NAV_ITEMS } from "@/data/navItems";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function MobileDrawer({
   isOpen,

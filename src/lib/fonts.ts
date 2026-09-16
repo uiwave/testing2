@@ -10,11 +10,11 @@ export const bebasNeue = localFont({
 export const inter = localFont({
   src: [
     {
-      path: "../../public/fonts/Inter-VariableFont_opsz,wght.woff2",
+      path: "../../public/fonts/Inter-VariableFont.woff2",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Inter-Italic-VariableFont_opsz,wght.woff2",
+      path: "../../public/fonts/Inter-Italic-VariableFont.woff2",
       style: "italic",
     },
   ],

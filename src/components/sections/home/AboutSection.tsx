@@ -1,6 +1,6 @@
 import { Heading } from "@/components/uiwave/Heading";
+import { Link } from "@/i18n/navigation";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function AboutSection() {

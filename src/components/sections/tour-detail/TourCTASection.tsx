@@ -1,6 +1,6 @@
+import { Link } from "@/i18n/navigation";
 import { Tour } from "@/types/Tour";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 
 interface Props {
   tour: Tour;
