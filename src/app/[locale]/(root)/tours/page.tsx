@@ -7,10 +7,16 @@ import { FilterSection } from "@/components/sections/tours/FilterSection";
 
 interface Props {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{
+    destino?: string;
+    duracion?: string;
+    precio?: string;
+  }>;
 }
 
-export default async function ToursPage({ params }: Props) {
+export default async function ToursPage({ params, searchParams }: Props) {
   const { locale: localeValue } = await params;
+  const { destino, duracion, precio } = await searchParams;
 
   if (!isLocale(localeValue)) {
     notFound();
@@ -22,7 +28,7 @@ export default async function ToursPage({ params }: Props) {
     <>
       <PageHero title="Nuestros Tours" image="/images/puno.webp" />
       <FilterSection />
-      <ToursGrid tours={tours} />
+      <ToursGrid tours={tours} destino={destino} duracion={duracion} precio={precio} />
     </>
   );
 }
