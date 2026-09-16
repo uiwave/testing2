@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { LANGUAGE_OPTIONS } from "@/data/language";
 
 import {
@@ -15,11 +15,14 @@ import {
 export default function LanguageSelector() {
   const router = useRouter();
   const pathName = usePathname();
+  const searchParams = useSearchParams();
   const currentLocale = useLocale();
 
   const changeLanguage = (newLocale: string) => {
     const newPathname = pathName.replace(`/${currentLocale}`, `/${newLocale}`);
-    router.push(newPathname);
+    const paramString = searchParams.toString();
+    const url = paramString ? `${newPathname}?${paramString}` : newPathname;
+    router.push(url);
   };
 
   return (
