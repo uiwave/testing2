@@ -1,6 +1,7 @@
 import { DestinationCard } from "@/components/uiwave/DestinationCard";
 import { Heading } from "@/components/uiwave/Heading";
 import { Destination } from "@/types/Destination";
+import { useTranslations } from "next-intl";
 import {
   Carousel,
   CarouselContent,
@@ -35,15 +36,15 @@ export const DESTINATIONS: Destination[] = [
 ];
 
 export default function DestinationsSection() {
+  const t = useTranslations("home.destination");
+
   return (
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section pb-0">
         <Heading
-          badge="Lo mejor de Perú"
-          title="Explora nuestros destinos"
-          description="Descubre los destinos más impresionantes de Perú. Desde paisajes
-              majestuosos hasta sitios históricos, vive experiencias auténticas
-              y memorables en cada rincón del país."
+          badge={t("badge")}
+          title={t("title")}
+          description={t("description")}
         />
         <Carousel
           opts={{

@@ -1,0 +1,47 @@
+{
+  "common": {
+    "destinations": "Destinations"
+  },
+  "header": {
+    "nav": {
+      "destinations": "Destinations",
+      "cusco": "Cusco",
+      "arequipa": "Arequipa",
+      "puno": "Puno",
+      "ica": "Ica",
+      "aboutUs": "About Us",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Unique Expeditions in Peru",
+      "title": "Adventure",
+      "videoFallback": "Your browser does not support the video tag."
+    },
+    "destination": {
+      "badge": "Best of Peru",
+      "title": "Explore our destinations",
+      "description": "Discover the most stunning destinations in Peru. From majestic landscapes to historic sites, experience authentic and memorable experiences in every corner of the country."
+    },
+    "about": {
+      "badge": "About us",
+      "title": "Discover the world travel smart with us",
+      "description": "We combine local expertise and technology to make every trip through Peru simple, safe and memorable from start to finish."
+    },
+    "popular_tour": {
+      "badge": "Don't miss out",
+      "title": "Our Top Tours in Peru"
+    },
+    "gallery": {
+      "badge": "Moments",
+      "title": "Experience Gallery",
+      "description": "Discover the most stunning destinations in Peru. From majestic landscapes to historic sites, experience authentic and memorable experiences in every corner of the country."
+    },
+    "testimonial": {
+      "badge": "What they say",
+      "title": "Testimonials from Our Travelers",
+      "description": "The experiences of those who have already traveled with us speak for themselves. Real stories, unique moments and memories that last forever."
+    }
+  }
+}

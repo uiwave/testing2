@@ -4,14 +4,13 @@ import { cn } from "cn";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import TopBar from "./TopBar";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import DesktopNavigation from "./DesktopNavigation";
 import LanguageSelector from "./LanguageSelector";
 import MobileDrawer from "./MobileDrawer";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
@@ -19,10 +18,6 @@ export function Header() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const switchLocale = useCallback((_code: string) => {
-    // no-op: i18n se implementará más adelante
   }, []);
 
   return (
@@ -56,11 +51,7 @@ export function Header() {
               </Link>
             </div>
             <div className="flex items-center justify-end">
-              <LanguageSelector
-                langOpen={langOpen}
-                setLangOpen={setLangOpen}
-                onSwitchLocale={switchLocale}
-              />
+              <LanguageSelector />
             </div>
           </div>
         </div>

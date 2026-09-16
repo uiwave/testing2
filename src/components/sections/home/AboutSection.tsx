@@ -1,8 +1,11 @@
 import { Heading } from "@/components/uiwave/Heading";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function AboutSection() {
+  const t = useTranslations("home.about");
+
   return (
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section pb-0">
@@ -22,10 +25,9 @@ export default function AboutSection() {
           <div className="flex flex-col items-start gap-6">
             <Heading
               centered
-              badge="Sobre nosotros"
-              title="Descubre el mundo viaja inteligente con nosotros"
-              description=" Combinamos experiencia local y tecnología para que cada viaje por
-              Perú sea simple, seguro y memorable de principio a fin."
+              badge={t("badge")}
+              title={t("title")}
+              description={t("description")}
               className="mb-0 text-start lg:mb-0"
             />
             <div className="flex w-full flex-col gap-6">

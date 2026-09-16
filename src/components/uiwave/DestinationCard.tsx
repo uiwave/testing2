@@ -1,5 +1,5 @@
+import { Link } from "@/i18n/navigation";
 import { Destination } from "@/types/Destination";
-import Link from "next/link";
 
 interface Props {
   data: Destination;

@@ -1,0 +1,47 @@
+{
+  "common": {
+    "destinations": "Destinos"
+  },
+  "header": {
+    "nav": {
+      "destinations": "Destinos",
+      "cusco": "Cusco",
+      "arequipa": "Arequipa",
+      "puno": "Puno",
+      "ica": "Ica",
+      "aboutUs": "Nosotros",
+      "contact": "Contacto"
+    }
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Expediciones Únicas en Perú",
+      "title": "Aventura",
+      "videoFallback": "Tu navegador no soporta el formato de video."
+    },
+    "destination": {
+      "badge": "Lo mejor de Perú",
+      "title": "Explora nuestros destinos",
+      "description": "Descubre los destinos más impresionantes de Perú. Desde paisajes majestuosos hasta sitios históricos, vive experiencias auténticas y memorables en cada rincón del país."
+    },
+    "about": {
+      "badge": "Sobre nosotros",
+      "title": "Descubre el mundo viaja inteligente con nosotros",
+      "description": "Combinamos experiencia local y tecnología para que cada viaje por Perú sea simple, seguro y memorable de principio a fin."
+    },
+    "popular_tour": {
+      "badge": "No te pierdas",
+      "title": "Nuestros Tours Destacados en Perú"
+    },
+    "gallery": {
+      "badge": "Momentos",
+      "title": "Galería de Experiencias",
+      "description": "Descubre los destinos más impresionantes de Perú. Desde paisajes majestuosos hasta sitios históricos, vive experiencias auténticas y memorables en cada rincón del país."
+    },
+    "testimonial": {
+      "badge": "Lo que dicen",
+      "title": "Testimonios de Nuestros Viajeros",
+      "description": "Las experiencias de quienes ya viajaron con nosotros hablan por sí solas. Historias reales, momentos únicos y recuerdos que duran para siempre."
+    }
+  }
+}

@@ -6,15 +6,17 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { useTranslations } from "next-intl";
 
 export default function TestimonialsSection() {
+  const t = useTranslations("home.testimonial");
   return (
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section">
         <Heading
-          badge="Lo que dicen"
-          title="Testimonios de Nuestros Viajeros"
-          description="Las experiencias de quienes ya viajaron con nosotros hablan por sí solas. Historias reales, momentos únicos y recuerdos que duran para siempre."
+          badge={t("badge")}
+          title={t("title")}
+          description={t("description")}
         />
         <Carousel
           opts={{

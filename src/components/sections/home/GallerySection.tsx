@@ -2,6 +2,7 @@
 
 import { Heading } from "@/components/uiwave/Heading";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const galleryImages = [
   "/images/Tour-a-Machu-Picchu-03.webp",
@@ -15,15 +16,16 @@ const galleryImages = [
 ];
 
 export default function GallerySection() {
+  const t = useTranslations("home.gallery");
   const [stopScroll, setStopScroll] = useState(false);
 
   return (
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section pb-0">
         <Heading
-          badge="Momentos"
-          title="Galería de Experiencias"
-          description="Descubre los destinos más impresionantes de Perú. Desde paisajes majestuosos hasta sitios históricos, vive experiencias auténticas y memorables en cada rincón del país."
+          badge={t("badge")}
+          title={t("title")}
+          description={t("description")}
         />
       </div>
 
