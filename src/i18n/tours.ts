@@ -3,12 +3,7 @@ import { routing } from "./routing";
 
 export type Locale = (typeof routing.locales)[number];
 
-const TOUR_SLUGS = [
-  "cusco-machu-picchu",
-  "ica-huacachina",
-  "puno-lago-titicaca",
-  "arequipa-canon-del-colca",
-] as const;
+const TOUR_SLUGS = ["tour-a-machu-picchu"] as const;
 
 export type TourSlug = (typeof TOUR_SLUGS)[number];
 
@@ -34,9 +29,8 @@ export async function getTourBySlug(
   locale: Locale,
 ): Promise<Tour | undefined> {
   try {
-    const tour = (
-      await import(`../../messages/tours/${slug}/${locale}.json`)
-    ).default as Tour;
+    const tour = (await import(`../../messages/tours/${slug}/${locale}.json`))
+      .default as Tour;
     return tour;
   } catch {
     return undefined;
