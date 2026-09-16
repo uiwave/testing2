@@ -28,10 +28,6 @@ export default async function TourDetailPage({ params }: Props) {
       <PageHero
         title={tour.title}
         image={tour.image}
-        breadcrumbs={[
-          { label: "Tours", href: "/tours" },
-          { label: tour.title, href: `/tours/${tour.slug}` },
-        ]}
       />
       <TourInfoSection tour={tour} />
       <TourGallerySection tour={tour} />

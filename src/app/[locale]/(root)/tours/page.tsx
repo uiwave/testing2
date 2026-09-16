@@ -8,7 +8,6 @@ export default function ToursPage() {
       <PageHero
         title="Nuestros Tours"
         image="/images/puno.webp"
-        breadcrumbs={[{ label: "Tours", href: "/tours" }]}
       />
       <section className="w-full overflow-hidden">
         <div className="uw-container uw-section pb-0">
