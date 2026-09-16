@@ -28,7 +28,12 @@ export default async function ToursPage({ params, searchParams }: Props) {
     <>
       <PageHero title="Nuestros Tours" image="/images/puno.webp" />
       <FilterSection />
-      <ToursGrid tours={tours} destino={destino} duracion={duracion} precio={precio} />
+      <ToursGrid
+        tours={tours}
+        destino={destino}
+        duracion={duracion}
+        precio={precio}
+      />
     </>
   );
 }

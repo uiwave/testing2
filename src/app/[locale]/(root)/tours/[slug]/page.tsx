@@ -1,5 +1,10 @@
 import { notFound } from "next/navigation";
-import { getTourBySlug, getTourSlugs, isLocale, type Locale } from "@/i18n/tours";
+import {
+  getTourBySlug,
+  getTourSlugs,
+  isLocale,
+  type Locale,
+} from "@/i18n/tours";
 import PageHero from "@/components/uiwave/PageHero";
 import TourInfoSection from "@/components/sections/tour-detail/TourInfoSection";
 import TourGallerySection from "@/components/sections/tour-detail/TourGallerySection";
@@ -32,10 +37,7 @@ export default async function TourDetailPage({ params }: Props) {
 
   return (
     <>
-      <PageHero
-        title={tour.title}
-        image={tour.image}
-      />
+      <PageHero title={tour.title} image={tour.image} />
       <TourInfoSection tour={tour} />
       <TourGallerySection tour={tour} />
       <TourItinerarySection tour={tour} />

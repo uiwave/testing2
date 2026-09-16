@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/carousel";
 import { DESTINATIONS } from "@/data/destinations";
 
-
 export default function DestinationsSection() {
   const t = useTranslations("home.destination");
 
