@@ -1,13 +1,14 @@
 "use client";
 
+import { Suspense, useEffect, useState } from "react";
 import { cn } from "cn";
 import { Menu } from "lucide-react";
-import Link from "next/link";
 import TopBar from "./TopBar";
-import { useEffect, useState } from "react";
 import DesktopNavigation from "./DesktopNavigation";
 import LanguageSelector from "./LanguageSelector";
 import MobileDrawer from "./MobileDrawer";
+import { ROUTES } from "@/config/routes";
+import { Link } from "@/i18n/navigation";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,7 +43,7 @@ export function Header() {
               <DesktopNavigation />
             </div>
             <div className="flex items-center justify-center">
-              <Link href="#">
+              <Link href={ROUTES.HOME}>
                 <img
                   src="/logo-white.webp"
                   alt=""
@@ -51,7 +52,9 @@ export function Header() {
               </Link>
             </div>
             <div className="flex items-center justify-end">
-              <LanguageSelector />
+              <Suspense>
+                <LanguageSelector />
+              </Suspense>
             </div>
           </div>
         </div>
