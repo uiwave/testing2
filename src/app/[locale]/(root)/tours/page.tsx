@@ -1,25 +1,28 @@
 import PageHero from "@/components/uiwave/PageHero";
 import ToursGrid from "@/components/sections/tours/ToursGrid";
 import { Heading } from "@/components/uiwave/Heading";
+import { getTours, isLocale } from "@/i18n/tours";
+import { notFound } from "next/navigation";
+import { FilterSection } from "@/components/sections/tours/FilterSection";
 
-export default function ToursPage() {
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function ToursPage({ params }: Props) {
+  const { locale: localeValue } = await params;
+
+  if (!isLocale(localeValue)) {
+    notFound();
+  }
+
+  const tours = await getTours(localeValue);
+
   return (
     <>
-      <PageHero
-        title="Nuestros Tours"
-        image="/images/puno.webp"
-      />
-      <section className="w-full overflow-hidden">
-        <div className="uw-container uw-section pb-0">
-          <Heading
-            centered
-            badge="Explora Perú"
-            title="Encuentra tu aventura perfecta"
-            description="Desde ruinas incas hasta oasis en el desierto. Elige el destino que más te inspire y vive una experiencia única."
-          />
-        </div>
-      </section>
-      <ToursGrid />
+      <PageHero title="Nuestros Tours" image="/images/puno.webp" />
+      <FilterSection />
+      <ToursGrid tours={tours} />
     </>
   );
 }

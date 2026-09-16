@@ -1,0 +1,34 @@
+{
+  "slug": "ica-huacachina",
+  "destination": "ICA",
+  "image": "/images/Tour-Huacachina-Buggy-Sandboarding-02.webp",
+  "title": "Huacachina Oasis and Dune Buggies",
+  "price": 85,
+  "duration": "Full Day",
+  "description": "Enjoy an exciting adventure in the Ica desert. Ride dune buggies over the dunes, try sandboarding and relax at the Huacachina oasis, a green emerald in the middle of the desert.",
+  "difficulty": "Easy",
+  "images": [
+    "/images/Tour-Huacachina-Buggy-Sandboarding-02.webp",
+    "/images/Tour-a-Machu-Picchu-03.webp",
+    "/images/puno.webp",
+    "/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Ica → Huacachina → Ica",
+      "description": "Hotel pickup at 9:00 am. Transfer to the desert for a 1-hour dune buggy ride over the dunes. Then 45 minutes of sandboarding on the highest dunes. Arrival at the Huacachina oasis for free time and photos. Return at 4:00 pm."
+    }
+  ],
+  "includes": [
+    "Round-trip transport from Ica",
+    "1 hour of dune buggies",
+    "45 minutes of sandboarding",
+    "Basic insurance"
+  ],
+  "notIncludes": [
+    "Lunch",
+    "Tips",
+    "Personal expenses"
+  ]
+}

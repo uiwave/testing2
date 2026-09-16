@@ -1,0 +1,41 @@
+{
+  "slug": "puno-lago-titicaca",
+  "destination": "PUNO",
+  "image": "/images/puno.webp",
+  "title": "Ilhas Uros e Taquile",
+  "price": 120,
+  "duration": "2 Dias / 1 Noite",
+  "description": "Explore o lago navegável mais alto do mundo. Conheça as ilhas flutuantes de Uros, construídas com totora, e a ilha de Taquile, famosa por seus têxteis declarados patrimônio cultural imaterial da humanidade.",
+  "difficulty": "Fácil",
+  "images": [
+    "/images/puno.webp",
+    "/images/Tour-a-Machu-Picchu-03.webp",
+    "/images/Tour-Huacachina-Buggy-Sandboarding-02.webp",
+    "/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Puno → Ilhas Uros",
+      "description": "Retirada no porto às 7:00 am. Navegação até as ilhas flutuantes de Uros. Visita guiada explicando a cultura e o estilo de vida de seus habitantes. Almoço típico. Tarde livre para explorar Puno."
+    },
+    {
+      "day": 2,
+      "title": "Ilha de Taquile → Puno",
+      "description": "Navegação cedo para a ilha de Taquile. Caminhada pelas trilhas da ilha, visita às oficinas de tecelagem e almoço com vista para o lago. Retorno a Puno ao pôr do sol."
+    }
+  ],
+  "includes": [
+    "Transporte de barco",
+    "Guia turístico bilíngue",
+    "1 noite em acomodação local",
+    "Almoço dia 1 e dia 2",
+    "Entrada nas ilhas Uros"
+  ],
+  "notIncludes": [
+    "Transporte terrestre de/para Puno",
+    "Gorjetas",
+    "Despesas pessoais",
+    "Bebidas"
+  ]
+}

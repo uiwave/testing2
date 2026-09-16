@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { TOURS, getTourBySlug } from "@/data/tours";
+import { getTourBySlug, getTourSlugs, isLocale, type Locale } from "@/i18n/tours";
 import PageHero from "@/components/uiwave/PageHero";
 import TourInfoSection from "@/components/sections/tour-detail/TourInfoSection";
 import TourGallerySection from "@/components/sections/tour-detail/TourGallerySection";
@@ -8,16 +8,23 @@ import TourIncludesSection from "@/components/sections/tour-detail/TourIncludesS
 import TourCTASection from "@/components/sections/tour-detail/TourCTASection";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
-export function generateStaticParams() {
-  return TOURS.map((tour) => ({ slug: tour.slug }));
+export async function generateStaticParams() {
+  const slugs = await getTourSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export default async function TourDetailPage({ params }: Props) {
-  const { slug } = await params;
-  const tour = getTourBySlug(slug);
+  const { slug, locale: localeValue } = await params;
+
+  if (!isLocale(localeValue)) {
+    notFound();
+  }
+
+  const locale: Locale = localeValue;
+  const tour = await getTourBySlug(slug, locale);
 
   if (!tour) {
     notFound();

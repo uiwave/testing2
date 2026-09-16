@@ -5,9 +5,13 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import TourCard from "@/components/uiwave/TourCard";
-import { TOURS } from "@/data/tours";
+import type { Tour } from "@/types/Tour";
 
-export default function PopularToursSection() {
+interface Props {
+  tours: Tour[];
+}
+
+export default function PopularToursSection({ tours }: Props) {
   return (
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section pb-0">
@@ -23,7 +27,7 @@ export default function PopularToursSection() {
           className="relative w-full"
         >
           <CarouselContent>
-            {TOURS.map((tour) => (
+            {tours.map((tour) => (
               <CarouselItem
                 key={tour.slug}
                 className="basis-full pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"

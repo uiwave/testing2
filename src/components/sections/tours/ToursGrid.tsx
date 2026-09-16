@@ -1,19 +1,23 @@
 "use client";
 
 import { useState } from "react";
-import { TOURS } from "@/data/tours";
 import TourCard from "@/components/uiwave/TourCard";
 import { cn } from "cn";
+import type { Tour } from "@/types/Tour";
+
+interface Props {
+  tours: Tour[];
+}
 
 const DESTINATIONS = ["Todos", "Cusco", "Arequipa", "Puno", "Ica"] as const;
 
-export default function ToursGrid() {
+export default function ToursGrid({ tours }: Props) {
   const [activeFilter, setActiveFilter] = useState<string>("Todos");
 
   const filteredTours =
     activeFilter === "Todos"
-      ? TOURS
-      : TOURS.filter(
+      ? tours
+      : tours.filter(
           (tour) =>
             tour.destination.toLowerCase() === activeFilter.toLowerCase(),
         );

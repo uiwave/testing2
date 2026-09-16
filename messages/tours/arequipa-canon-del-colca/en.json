@@ -1,0 +1,41 @@
+{
+  "slug": "arequipa-canon-del-colca",
+  "destination": "AREQUIPA",
+  "image": "/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp",
+  "title": "Colca Canyon Express",
+  "price": 150,
+  "duration": "2 Days / 1 Night",
+  "description": "Admire one of the deepest canyons in the world and watch condors flying free. End the trip relaxing in the La Calera hot springs, with waters at 38°C with views of the volcanoes.",
+  "difficulty": "Moderate",
+  "images": [
+    "/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp",
+    "/images/Tour-a-Machu-Picchu-03.webp",
+    "/images/puno.webp",
+    "/images/Tour-Huacachina-Buggy-Sandboarding-02.webp"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arequipa → Colca Canyon",
+      "description": "Departure at 3:00 am from Arequipa. Stop at the viewpoint of the Misti and Chachani volcanoes. Arrival at Cruz del Cóndor to watch the flight of the condors. Lunch in Chivay. Free afternoon to explore the town."
+    },
+    {
+      "day": 2,
+      "title": "Chivay → Hot Springs → Arequipa",
+      "description": "Free morning to visit the Chivay market. Transfer to the La Calera hot springs to relax for 2 hours. Return to Arequipa arriving at approximately 6:00 pm."
+    }
+  ],
+  "includes": [
+    "Round-trip transport from Arequipa",
+    "Certified tourist guide",
+    "1 night in a hotel in Chivay",
+    "Lunch on day 1",
+    "La Calera hot springs entrance"
+  ],
+  "notIncludes": [
+    "Dinner and breakfast",
+    "Tips",
+    "Personal expenses",
+    "Travel insurance"
+  ]
+}

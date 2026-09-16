@@ -4,14 +4,28 @@ import PopularToursSection from "@/components/sections/home/PopularToursSection"
 import GallerySection from "@/components/sections/home/GallerySection";
 import AboutSection from "@/components/sections/home/AboutSection";
 import HeroSection from "@/components/sections/home/HeroSection";
+import { getTours, isLocale } from "@/i18n/tours";
+import { notFound } from "next/navigation";
 
-export default function Home() {
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Home({ params }: Props) {
+  const { locale: localeValue } = await params;
+
+  if (!isLocale(localeValue)) {
+    notFound();
+  }
+
+  const tours = await getTours(localeValue);
+
   return (
     <>
       <HeroSection />
       <DestinationsSection />
       <AboutSection />
-      <PopularToursSection />
+      <PopularToursSection tours={tours} />
       <GallerySection />
       <TestimonialsSection />
     </>

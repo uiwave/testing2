@@ -1,0 +1,41 @@
+{
+  "slug": "arequipa-canon-del-colca",
+  "destination": "AREQUIPA",
+  "image": "/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp",
+  "title": "Cañón do Colca Express",
+  "price": 150,
+  "duration": "2 Dias / 1 Noite",
+  "description": "Admire um dos cânions mais profundos do mundo e observe os condores em voo livre. Termine a viagem relaxando nas águas termais de La Calera, com águas a 38°C com vista para os vulcões.",
+  "difficulty": "Moderada",
+  "images": [
+    "/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp",
+    "/images/Tour-a-Machu-Picchu-03.webp",
+    "/images/puno.webp",
+    "/images/Tour-Huacachina-Buggy-Sandboarding-02.webp"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arequipa → Cañón do Colca",
+      "description": "Saída às 3:00 am de Arequipa. Parada no mirante dos vulcões Misti e Chachani. Chegada a Cruz del Cóndor para observar o voo dos condores. Almoço em Chivay. Tarde livre para explorar a localidade."
+    },
+    {
+      "day": 2,
+      "title": "Chivay → Águas Termais → Arequipa",
+      "description": "Manhã livre para visitar o mercado de Chivay. Transferência para as águas termais de La Calera para relaxar por 2 horas. Retorno a Arequipa chegando aproximadamente às 6:00 pm."
+    }
+  ],
+  "includes": [
+    "Transporte ida e volta de Arequipa",
+    "Guia turístico certificado",
+    "1 noite em hotel em Chivay",
+    "Almoço dia 1",
+    "Entrada nas águas termais La Calera"
+  ],
+  "notIncludes": [
+    "Jantar e café da manhã",
+    "Gorjetas",
+    "Despesas pessoais",
+    "Seguro de viagem"
+  ]
+}
