@@ -31,8 +31,6 @@ export default async function TourDetailPage({ params }: Props) {
   const locale: Locale = localeValue;
   const tour = await getTourBySlug(slug, locale);
 
-  console.log(tour);
-
   if (!tour) {
     notFound();
   }
@@ -40,7 +38,7 @@ export default async function TourDetailPage({ params }: Props) {
   return (
     <>
       <PageHero title={tour.title} image={tour.image} />
-      <div className="uw-container">
+      <div className="uw-container uw-section">
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12">
           <div className="space-y-8 lg:col-span-8">
             {tour.includes && <IncludeTour data={tour.includes} />}

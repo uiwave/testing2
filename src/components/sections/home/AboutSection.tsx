@@ -31,9 +31,7 @@ export default function AboutSection() {
     <section className="w-full overflow-hidden">
       <div className="uw-container uw-section pb-0">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-10">
-          {/* COLUMNA IZQUIERDA: GALERÍA DE 3 IMÁGENES */}
           <div className="grid grid-cols-2 gap-4">
-            {/* Imagen Grande (Izquierda) */}
             <div className="h-full w-full overflow-hidden rounded-full shadow-lg">
               <img
                 src="/images/Cuevas-de-Arte-Rupestre-en-Sumbay-02.webp"
@@ -42,11 +40,10 @@ export default function AboutSection() {
               />
             </div>
 
-            {/* Columna con 2 Imágenes Medianas (Derecha) */}
             <div className="grid h-full grid-rows-2 gap-4">
               <div className="h-full w-full overflow-hidden rounded-full rounded-bl-none shadow-lg">
                 <img
-                  src="/images/Cuevas-de-Arte-Rupestre-en-Sumbay-02.webp" // Cambia por tu ruta de imagen
+                  src="/images/Cuevas-de-Arte-Rupestre-en-Sumbay-02.webp"
                   alt="Plato peruano o ingrediente"
                   className="h-full w-full object-cover"
                 />
@@ -54,7 +51,7 @@ export default function AboutSection() {
 
               <div className="h-full w-full overflow-hidden rounded-full rounded-tl-none shadow-lg">
                 <img
-                  src="/images/Cuevas-de-Arte-Rupestre-en-Sumbay-02.webp" // Cambia por tu ruta de imagen
+                  src="/images/Cuevas-de-Arte-Rupestre-en-Sumbay-02.webp"
                   alt="Experiencia gastronómica"
                   className="h-full w-full object-cover"
                 />
@@ -62,7 +59,6 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* COLUMNA DERECHA: INFORMACIÓN */}
           <div className="flex flex-col items-start gap-6">
             <Heading
               centered

@@ -8,7 +8,7 @@ interface Props {
 export function DestinationCard({ data }: Props) {
   return (
     <Link
-      href={data.slug}
+      href={`/tours?destino=${data.slug}`}
       className="group bg-card border-border flex w-full flex-col overflow-hidden rounded-2xl border"
     >
       <div className="relative aspect-4/4 w-full overflow-hidden">
