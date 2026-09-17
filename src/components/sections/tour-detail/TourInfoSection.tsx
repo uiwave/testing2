@@ -1,5 +1,4 @@
 import { Tour } from "@/types/Tour";
-import { Heading } from "@/components/uiwave/Heading";
 import { Clock, Signal, MapPin, DollarSign } from "lucide-react";
 
 interface Props {
@@ -9,16 +8,8 @@ interface Props {
 export default function TourInfoSection({ tour }: Props) {
   return (
     <section className="w-full overflow-hidden">
-      <div className="uw-container uw-section">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-16">
-          <div className="lg:col-span-2">
-            <Heading
-              badge={tour.destination}
-              title={tour.title}
-              className="mb-0 text-start"
-            />
-            <p className="mt-6 text-base leading-relaxed">{tour.description}</p>
-          </div>
+      <div >
+        <div >
           <div className="bg-card border-border flex flex-col gap-4 rounded-2xl border p-6">
             <h3 className="font-heading text-xl tracking-wider text-white">
               Resumen del tour
@@ -26,7 +17,7 @@ export default function TourInfoSection({ tour }: Props) {
             <div className="border-border flex items-center gap-3 border-b pb-4">
               <DollarSign className="text-primary size-5 shrink-0" />
               <div>
-                <span className="text-muted-foreground text-xs">Precio</span>
+                <span className="text-muted-foreground text-xs">Precio</span> 
                 <p className="font-heading text-2xl text-white">
                   ${tour.price} <span className="text-sm">Persona</span>
                 </p>

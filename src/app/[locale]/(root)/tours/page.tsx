@@ -1,9 +1,9 @@
 import PageHero from "@/components/uiwave/PageHero";
 import ToursGrid from "@/components/sections/tours/ToursGrid";
-import { Heading } from "@/components/uiwave/Heading";
 import { getTours, isLocale } from "@/i18n/tours";
 import { notFound } from "next/navigation";
 import { FilterSection } from "@/components/sections/tours/FilterSection";
+import { getTranslations } from "next-intl/server";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -17,6 +17,7 @@ interface Props {
 export default async function ToursPage({ params, searchParams }: Props) {
   const { locale: localeValue } = await params;
   const { destino, duracion, precio } = await searchParams;
+  const t = await getTranslations("tours");
 
   if (!isLocale(localeValue)) {
     notFound();
@@ -26,7 +27,7 @@ export default async function ToursPage({ params, searchParams }: Props) {
 
   return (
     <>
-      <PageHero title="Nuestros Tours" image="/images/puno.webp" />
+      <PageHero title={t("hero.title")} image="/images/puno.webp" />
       <FilterSection />
       <ToursGrid
         tours={tours}

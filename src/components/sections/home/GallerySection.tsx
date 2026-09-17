@@ -10,7 +10,7 @@ const galleryImages = [
   "/images/Canon-del-Colca-y-Aguas-Termales-de-La-Calera-03.webp",
   "/images/Tour-Huacachina-Buggy-Sandboarding-02.webp",
   "/images/City-Tour-Cusco-03.webp",
-  "/images/Ascenso-volcan-Misti-–-Ruta-norte-02.webp",
+  "/images/Ascenso-volcan-Misti-Ruta-norte-02.webp",
   "/images/Tour-en-Bote-a-Islas-Ballestas-y-Candelabro-02.webp",
   "/images/puno.webp",
 ];

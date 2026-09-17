@@ -1,13 +1,12 @@
 import { DestinationCard } from "@/components/uiwave/DestinationCard";
 import { Heading } from "@/components/uiwave/Heading";
-import { Destination } from "@/types/Destination";
+import { DESTINATIONS } from "@/data/destinations";
 import { useTranslations } from "next-intl";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { DESTINATIONS } from "@/data/destinations";
 
 export default function DestinationsSection() {
   const t = useTranslations("home.destination");

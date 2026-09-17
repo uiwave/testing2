@@ -5,5 +5,22 @@
   "title": "Machu Picchu",
   "price": 300,
   "duration": "Full Day",
-  "popular": true
+  "popular": true,
+  "description":{
+
+  },
+  "includes": [
+    "Traslado IN – OUT del Hotel – Estación de Trenes",
+    "Tren turístico Ollantaytambo – Machupicchu",
+    "Bus subida y bajada a Machupicchu (Consettur)",
+    "Boleto de ingreso a Machu Picchu",
+    "Guía profesional bilingüe",
+    "Traslado Privado Ollantaytambo – Hotel en Cusco."
+  ],
+  "notIncludes": [
+    "Ingreso a Montaña de Machupicchu o Waynapicchu",
+    "Alimentación no mencionada en el programa",
+    "Gastos personales",
+    "Propinas"
+  ]
 }

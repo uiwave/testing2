@@ -43,5 +43,10 @@
       "title": "Testimonios de Nuestros Viajeros",
       "description": "Las experiencias de quienes ya viajaron con nosotros hablan por sí solas. Historias reales, momentos únicos y recuerdos que duran para siempre."
     }
+  },
+  "tours": {
+    "hero": {
+      "title": "Nuestros Tours"
+    }
   }
 }

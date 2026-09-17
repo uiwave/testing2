@@ -4,6 +4,7 @@ export interface TourItinerary {
   description: string;
 }
 
+
 export interface Tour {
   slug: string;
   destination: string;
