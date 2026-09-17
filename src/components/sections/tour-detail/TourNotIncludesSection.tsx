@@ -1,21 +1,21 @@
-import { Check } from "lucide-react";
+import { X } from "lucide-react";
 
 interface Props {
-  includes?: string[];
+  notIncludes?: string[];
 }
 
-export default function TourIncludesSection({ includes }: Props) {
+export default function TourNotIncludesSection({ notIncludes }: Props) {
   return (
     <section className="w-full overflow-hidden">
       <div className="bg-card border-border flex flex-col gap-4 rounded-2xl border p-6">
         <h3 className="font-heading text-lg tracking-wider text-white">
-          Incluido
+          No incluido
         </h3>
         <ul className="flex flex-col gap-3">
-          {includes?.map((item) => (
+          {notIncludes?.map((item) => (
             <li key={item} className="flex items-start gap-3">
-              <div className="bg-primary/20 mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full">
-                <Check className="text-primary size-3" />
+              <div className="bg-destructive/20 mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full">
+                <X className="text-destructive size-3" />
               </div>
               <span className="text-white">{item}</span>
             </li>

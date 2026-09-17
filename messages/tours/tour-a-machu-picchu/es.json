@@ -6,9 +6,7 @@
   "price": 300,
   "duration": "Full Day",
   "popular": true,
-  "description":{
-
-  },
+  "description": "Descubre la majestuosidad de Machu Picchu, la ciudadela inca más emblemática del mundo. Este tour de día completo te lleva desde Cusco hasta la cumbre de los Andes, recorriendo el valle sagrado en tren turístico para explorar sus templos, terrazas agrícolas y la energía única de este sitio Patrimonio de la Humanidad.",
   "includes": [
     "Traslado IN – OUT del Hotel – Estación de Trenes",
     "Tren turístico Ollantaytambo – Machupicchu",
@@ -22,5 +20,36 @@
     "Alimentación no mencionada en el programa",
     "Gastos personales",
     "Propinas"
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Llegada a Cusco",
+      "description": "Recibimiento en el aeropuerto y traslado al hotel. Tarde libre para aclimatarse a la altitud y pasear por la ciudad."
+    },
+    {
+      "day": 2,
+      "title": "City Tour Cusco",
+      "description": "Visita guiada a la Plaza de Armas, la Catedral, el Qoricancha y las imponentes ruinas de Sacsayhuamán."
+    },
+    {
+      "day": 3,
+      "title": "Valle Sagrado",
+      "description": "Recorrido por Pisac, Ollantaytambo y Chinchero. Almuerzo típico y exploración de los mercados locales."
+    },
+    {
+      "day": 4,
+      "title": "Machu Picchu",
+      "description": "Trasllado en tren turístico a Aguas Calientes, bus al santuario y guiada completa por la ciudadela inca."
+    },
+    {
+      "day": 5,
+      "title": "Regreso a Cusco",
+      "description": "Tren de retorno hacia Ollantaytambo y traslado al hotel en Cusco. Fin del servicio."
+    }
+  ],
+  "images": [
+    "/images/Tour-a-Machu-Picchu-03.webp",
+    "/images/Cusco-a-Machu-Picchu-3-Dias-03.webp"
   ]
 }

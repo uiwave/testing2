@@ -1,7 +1,9 @@
-import TourItinerarySection from "@/components/sections/tour-detail/TourItinerarySection";
+import TourItineraryList from "@/components/sections/tour-detail/TourItineraryList";
 import TourIncludesSection from "@/components/sections/tour-detail/TourIncludesSection";
-import TourGallerySection from "@/components/sections/tour-detail/TourGallerySection";
+import TourNotIncludesSection from "@/components/sections/tour-detail/TourNotIncludesSection";
+import TourGalleryList from "@/components/sections/tour-detail/TourGalleryList";
 import TourInfoSection from "@/components/sections/tour-detail/TourInfoSection";
+import TourDescriptionSection from "@/components/sections/tour-detail/TourDescriptionSection";
 import PageHero from "@/components/uiwave/PageHero";
 import { notFound } from "next/navigation";
 import {
@@ -10,7 +12,6 @@ import {
   isLocale,
   type Locale,
 } from "@/i18n/tours";
-import IncludeTour from "@/components/sections/tour-detail/IncludeTour";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -41,7 +42,15 @@ export default async function TourDetailPage({ params }: Props) {
       <div className="uw-container uw-section">
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12">
           <div className="space-y-8 lg:col-span-8">
-            {tour.includes && <IncludeTour data={tour.includes} />}
+            {tour.description && (
+              <TourDescriptionSection description={tour.description} />
+            )}
+            {tour.itinerary && <TourItineraryList itinerary={tour.itinerary} />}
+            {tour.includes && <TourIncludesSection includes={tour.includes} />}
+            {tour.notIncludes && (
+              <TourNotIncludesSection notIncludes={tour.notIncludes} />
+            )}
+            {tour.images && <TourGalleryList images={tour.images} />}
           </div>
           <div className="lg:sticky lg:top-24 lg:col-span-4">
             <TourInfoSection tour={tour} />
