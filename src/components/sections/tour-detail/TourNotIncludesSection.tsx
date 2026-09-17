@@ -7,21 +7,20 @@ interface Props {
 export default function TourNotIncludesSection({ notIncludes }: Props) {
   return (
     <section className="w-full overflow-hidden">
-      <div className="bg-card border-border flex flex-col gap-4 rounded-2xl border p-6">
-        <h3 className="font-heading text-lg tracking-wider text-white">
-          No incluido
-        </h3>
-        <ul className="flex flex-col gap-3">
-          {notIncludes?.map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <div className="bg-destructive/20 mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full">
-                <X className="text-destructive size-3" />
-              </div>
-              <span className="text-white">{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <h3 className="font-heading text-lg tracking-wider text-white mb-2">
+        No incluido
+      </h3>
+      <div className="w-12 h-0.5 bg-destructive mb-6" />
+      <ul className="flex flex-col gap-3">
+        {notIncludes?.map((item) => (
+          <li key={item} className="flex items-start gap-3">
+            <div className="bg-destructive/10 mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-lg">
+              <X className="text-destructive size-3.5" />
+            </div>
+            <span className="text-sm text-white">{item}</span>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

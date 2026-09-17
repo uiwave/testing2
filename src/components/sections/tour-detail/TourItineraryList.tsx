@@ -7,28 +7,29 @@ interface Props {
 export default function TourItineraryList({ itinerary }: Props) {
   return (
     <section className="w-full overflow-hidden">
-      <h2 className="font-heading mb-6 text-xl tracking-wider text-white">
+      <h2 className="font-heading text-lg tracking-wider text-white mb-2">
         Itinerario
       </h2>
-      <div className="flex flex-col gap-6">
-        {itinerary?.map((day) => (
-          <div
-            key={day.day}
-            className="border-border border-b pb-6 last:border-0"
-          >
-            <div className="mb-2 flex items-center gap-3">
-              <span className="bg-primary text-primary-foreground font-heading flex size-7 items-center justify-center rounded-full text-sm">
+      <div className="w-12 h-0.5 bg-primary mb-6" />
+      <div className="relative">
+        <div className="absolute left-4 top-0 bottom-0 w-px bg-border" />
+        <div className="flex flex-col gap-8">
+          {itinerary?.map((day) => (
+            <div key={day.day} className="relative flex gap-6">
+              <div className="bg-primary text-primary-foreground font-heading relative z-10 flex size-8 shrink-0 items-center justify-center rounded-full text-sm">
                 {day.day}
-              </span>
-              <h3 className="font-heading text-lg tracking-wider text-white">
-                {day.title}
-              </h3>
+              </div>
+              <div className="flex flex-col gap-1 pt-1">
+                <h3 className="font-heading text-base tracking-wider text-white">
+                  {day.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/80">
+                  {day.description}
+                </p>
+              </div>
             </div>
-            <p className="pl-10 text-base leading-relaxed text-white">
-              {day.description}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

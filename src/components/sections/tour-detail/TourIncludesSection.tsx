@@ -7,21 +7,20 @@ interface Props {
 export default function TourIncludesSection({ includes }: Props) {
   return (
     <section className="w-full overflow-hidden">
-      <div className="bg-card border-border flex flex-col gap-4 rounded-2xl border p-6">
-        <h3 className="font-heading text-lg tracking-wider text-white">
-          Incluido
-        </h3>
-        <ul className="flex flex-col gap-3">
-          {includes?.map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <div className="bg-primary/20 mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full">
-                <Check className="text-primary size-3" />
-              </div>
-              <span className="text-white">{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <h3 className="font-heading text-lg tracking-wider text-white mb-2">
+        Incluido
+      </h3>
+      <div className="w-12 h-0.5 bg-primary mb-6" />
+      <ul className="flex flex-col gap-3">
+        {includes?.map((item) => (
+          <li key={item} className="flex items-start gap-3">
+            <div className="bg-primary/10 mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-lg">
+              <Check className="text-primary size-3.5" />
+            </div>
+            <span className="text-sm text-white">{item}</span>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

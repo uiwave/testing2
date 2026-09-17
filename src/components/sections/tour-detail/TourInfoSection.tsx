@@ -1,5 +1,4 @@
 import { Tour } from "@/types/Tour";
-import { Clock, Signal, MapPin, DollarSign } from "lucide-react";
 
 interface Props {
   tour: Tour;
@@ -7,64 +6,16 @@ interface Props {
 
 export default function TourInfoSection({ tour }: Props) {
   return (
-    // <section className="w-full overflow-hidden">
-    //   <div >
-    //     <div >
-    //       <div className="bg-card border-border flex flex-col gap-4 rounded-2xl border p-6">
-    //         <h3 className="font-heading text-xl tracking-wider text-white">
-    //           Resumen del tour
-    //         </h3>
-    //         <div className="border-border flex items-center gap-3 border-b pb-4">
-    //           <DollarSign className="text-primary size-5 shrink-0" />
-    //           <div>
-    //             <span className="text-muted-foreground text-xs">Precio</span>
-    //             <p className="font-heading text-2xl text-white">
-    //               ${tour.price} <span className="text-sm">Persona</span>
-    //             </p>
-    //           </div>
-    //         </div>
-    //         <div className="border-border flex items-center gap-3 border-b pb-4">
-    //           <Clock className="text-primary size-5 shrink-0" />
-    //           <div>
-    //             <span className="text-muted-foreground text-xs">Duración</span>
-    //             <p className="font-heading text-lg text-white">
-    //               {tour.duration}
-    //             </p>
-    //           </div>
-    //         </div>
-    //         <div className="border-border flex items-center gap-3 border-b pb-4">
-    //           <Signal className="text-primary size-5 shrink-0" />
-    //           <div>
-    //             <span className="text-muted-foreground text-xs">
-    //               Dificultad
-    //             </span>
-    //             <p className="font-heading text-lg text-white">
-    //               {tour.difficulty}
-    //             </p>
-    //           </div>
-    //         </div>
-    //         <div className="flex items-center gap-3">
-    //           <MapPin className="text-primary size-5 shrink-0" />
-    //           <div>
-    //             <span className="text-muted-foreground text-xs">Destino</span>
-    //             <p className="font-heading text-lg text-white">
-    //               {tour.destination}
-    //             </p>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
-    <div className="bg-card border-border w-full rounded-2xl border p-6 text-white sm:p-8">
-      <h2 className="font-heading mb-6 text-xl tracking-wider text-white">
+    <div className="w-full border border-border rounded-2xl p-6 text-white sm:p-8">
+      <h2 className="font-heading text-lg tracking-wider text-white mb-2">
         TOUR BOOKING
       </h2>
+      <div className="w-12 h-0.5 bg-primary mb-6" />
       <form className="space-y-6">
         <div className="border-border flex items-center justify-between border-b pb-6">
           <label
             htmlFor="from-date"
-            className="font-heading text-base tracking-wider text-white"
+            className="font-heading text-sm tracking-wider text-white"
           >
             From Date:
           </label>
@@ -76,7 +27,7 @@ export default function TourInfoSection({ tour }: Props) {
         </div>
 
         <div className="border-border flex items-center justify-between border-b pb-6">
-          <span className="font-heading text-base tracking-wider text-white">
+          <span className="font-heading text-sm tracking-wider text-white">
             Time:
           </span>
           <div className="flex items-center gap-6">
@@ -104,7 +55,7 @@ export default function TourInfoSection({ tour }: Props) {
         <div className="border-border border-b pb-6">
           <label
             htmlFor="tickets-select"
-            className="font-heading mb-2 block text-base tracking-wider text-white"
+            className="font-heading mb-2 block text-sm tracking-wider text-white"
           >
             Tickets
           </label>
@@ -123,7 +74,7 @@ export default function TourInfoSection({ tour }: Props) {
         </div>
 
         <div className="border-border border-b pb-6">
-          <span className="font-heading mb-3 block text-base tracking-wider">
+          <span className="font-heading mb-3 block text-sm tracking-wider text-white">
             Add Extra:
           </span>
           <div className="space-y-3">
@@ -152,10 +103,10 @@ export default function TourInfoSection({ tour }: Props) {
         </div>
 
         <div className="flex items-center justify-between pt-2">
-          <span className="font-heading text-xl tracking-wider text-white">
+          <span className="font-heading text-base tracking-wider text-white">
             Total:
           </span>
-          <span className="font-heading text-2xl text-white">150</span>
+          <span className="font-heading text-xl text-white">150</span>
         </div>
 
         <button
