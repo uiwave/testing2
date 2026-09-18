@@ -37,7 +37,7 @@ function BrandColumn() {
 function NewsletterColumn() {
   return (
     <div className="flex flex-col justify-center text-center">
-      <h3 className="font-heading text-[clamp(1.875rem,1.25rem+1.563vw,2.75rem)] leading-none tracking-wider">
+      <h3 className="uw-heading">
         Únete para recibir noticias y ofertas.
       </h3>
       <form className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -62,7 +62,7 @@ function NewsletterColumn() {
 function QuickLinksColumn() {
   return (
     <div className="flex flex-col items-center gap-4">
-      <h3 className="font-heading text-[clamp(1.5rem,1.054rem+1.116vw,2.125rem)] tracking-wider">
+      <h3 className="uw-heading">
         Enlaces
       </h3>
       <ul className="flex flex-col gap-2">
@@ -83,7 +83,7 @@ function QuickLinksColumn() {
 
 export function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#17233E]">
+    <footer className="relative w-full overflow-hidden bg-black/50">
       <img
         src="/images/bg/uw.webp"
         alt=""
@@ -103,10 +103,7 @@ export function Footer() {
             <QuickLinksColumn />
           </div>
 
-          <p
-            aria-hidden="true"
-            className="font-heading mt-10 text-center text-[clamp(4.688rem,-9.821rem+36.272vw,25rem)] leading-none select-none"
-          >
+          <p className="font-heading mt-10 text-center text-[clamp(4.688rem,-9.821rem+36.272vw,25rem)] leading-none select-none">
             VIAJEROS
           </p>
         </div>

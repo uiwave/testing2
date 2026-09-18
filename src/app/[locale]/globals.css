@@ -118,9 +118,6 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   html {
     @apply font-sans;
     scrollbar-width: none;
@@ -135,11 +132,23 @@
 }
 
 @utility uw-container {
-  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  @apply container mx-auto px-4;
+
+  @variant sm {
+    @apply px-6;
+  }
+
+  @variant lg {
+    @apply px-8;
+  }
 }
 
 @utility uw-section {
-  @apply py-16 sm:py-24;
+  @apply py-16;
+
+  @variant sm {
+    @apply py-24;
+  }
 }
 
 .marquee-track {
@@ -156,4 +165,8 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+@utility uw-heading {
+  @apply font-heading text-[clamp(1.875rem,1.25rem+1.563vw,2.75rem)] leading-none tracking-wider;
 }
