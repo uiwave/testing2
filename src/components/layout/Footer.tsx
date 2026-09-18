@@ -83,7 +83,7 @@ function QuickLinksColumn() {
 
 export function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden">
+    <footer className="relative w-full overflow-hidden bg-[#17233E]">
       <img
         src="/images/bg/uw.webp"
         alt=""
@@ -91,11 +91,10 @@ export function Footer() {
       />
       <div className="relative">
         <img
-          src="/images/Tour-a-Machu-Picchu-03.webp"
+          src="/images/bg/background_pattern.png"
           alt=""
-          className="absolute inset-0 h-full w-full object-cover"
+          className="pointer-events-none absolute right-0 bottom-0 z-0"
         />
-        <div className="bg-background/80 absolute inset-0" />
 
         <div className="uw-container relative pt-40 text-white">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-16">

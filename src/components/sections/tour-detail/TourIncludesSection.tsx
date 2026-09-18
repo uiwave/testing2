@@ -7,10 +7,10 @@ interface Props {
 export default function TourIncludesSection({ includes }: Props) {
   return (
     <section className="w-full overflow-hidden">
-      <h3 className="font-heading text-lg tracking-wider text-white mb-2">
+      <h3 className="font-heading mb-2 text-lg tracking-wider text-white">
         Incluido
       </h3>
-      <div className="w-12 h-0.5 bg-primary mb-6" />
+      <div className="bg-primary mb-6 h-0.5 w-12" />
       <ul className="flex flex-col gap-3">
         {includes?.map((item) => (
           <li key={item} className="flex items-start gap-3">

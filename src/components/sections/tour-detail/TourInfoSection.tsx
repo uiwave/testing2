@@ -6,11 +6,11 @@ interface Props {
 
 export default function TourInfoSection({ tour }: Props) {
   return (
-    <div className="w-full border border-border rounded-2xl p-6 text-white sm:p-8">
-      <h2 className="font-heading text-lg tracking-wider text-white mb-2">
+    <div className="border-border w-full rounded-2xl border p-6 text-white sm:p-8">
+      <h2 className="font-heading mb-2 text-lg tracking-wider text-white">
         TOUR BOOKING
       </h2>
-      <div className="w-12 h-0.5 bg-primary mb-6" />
+      <div className="bg-primary mb-6 h-0.5 w-12" />
       <form className="space-y-6">
         <div className="border-border flex items-center justify-between border-b pb-6">
           <label

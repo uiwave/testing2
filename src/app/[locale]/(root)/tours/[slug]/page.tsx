@@ -50,7 +50,9 @@ export default async function TourDetailPage({ params }: Props) {
             {tour.itinerary && <TourItineraryList itinerary={tour.itinerary} />}
             {(tour.includes || tour.notIncludes) && (
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                {tour.includes && <TourIncludesSection includes={tour.includes} />}
+                {tour.includes && (
+                  <TourIncludesSection includes={tour.includes} />
+                )}
                 {tour.notIncludes && (
                   <TourNotIncludesSection notIncludes={tour.notIncludes} />
                 )}

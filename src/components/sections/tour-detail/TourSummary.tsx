@@ -8,7 +8,7 @@ interface Props {
 export default function TourSummary({ tour }: Props) {
   return (
     <section className="w-full overflow-hidden">
-      <div className="border-y border-border flex flex-wrap items-center justify-between gap-6 py-8">
+      <div className="border-border flex flex-wrap items-center justify-between gap-6 border-y py-8">
         <div className="flex items-center gap-4">
           <div className="bg-primary/10 flex items-center justify-center rounded-xl p-3">
             <DollarSign className="text-primary size-6" />
@@ -21,7 +21,7 @@ export default function TourSummary({ tour }: Props) {
           </div>
         </div>
 
-        <div className="h-8 w-px bg-border hidden sm:block" />
+        <div className="bg-border hidden h-8 w-px sm:block" />
 
         <div className="flex items-center gap-4">
           <div className="bg-primary/10 flex items-center justify-center rounded-xl p-3">
@@ -35,7 +35,7 @@ export default function TourSummary({ tour }: Props) {
           </div>
         </div>
 
-        <div className="h-8 w-px bg-border hidden sm:block" />
+        <div className="bg-border hidden h-8 w-px sm:block" />
 
         <div className="flex items-center gap-4">
           <div className="bg-primary/10 flex items-center justify-center rounded-xl p-3">

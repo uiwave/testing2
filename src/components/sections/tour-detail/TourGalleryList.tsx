@@ -5,10 +5,10 @@ interface Props {
 export default function TourGalleryList({ images }: Props) {
   return (
     <section className="w-full overflow-hidden">
-      <h2 className="font-heading text-lg tracking-wider text-white mb-2">
+      <h2 className="font-heading mb-2 text-lg tracking-wider text-white">
         Galería
       </h2>
-      <div className="w-12 h-0.5 bg-primary mb-6" />
+      <div className="bg-primary mb-6 h-0.5 w-12" />
       <div className="grid grid-cols-2 gap-4">
         {images?.map((img, i) => (
           <div

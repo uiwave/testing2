@@ -24,7 +24,6 @@ export function FilterField({
   placeholder,
   options,
 }: FilterFieldProps) {
-  console.log(options);
   return (
     <div className="group lg:border-border relative flex flex-col gap-2 px-5 py-4 lg:flex-1 lg:border-r">
       <div className="flex items-center gap-2">
