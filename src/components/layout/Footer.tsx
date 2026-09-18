@@ -37,7 +37,7 @@ function BrandColumn() {
 function NewsletterColumn() {
   return (
     <div className="flex flex-col justify-center text-center">
-      <h3 className="uw-heading">
+      <h3 className="font-heading text-[clamp(1.875rem,1.25rem+1.563vw,2.75rem)] leading-none tracking-wider">
         Únete para recibir noticias y ofertas.
       </h3>
       <form className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -62,7 +62,7 @@ function NewsletterColumn() {
 function QuickLinksColumn() {
   return (
     <div className="flex flex-col items-center gap-4">
-      <h3 className="uw-heading">
+      <h3 className="font-heading text-[clamp(1.5rem,1.054rem+1.116vw,2.125rem)] tracking-wider">
         Enlaces
       </h3>
       <ul className="flex flex-col gap-2">

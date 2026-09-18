@@ -166,7 +166,3 @@
     transform: translateX(-50%);
   }
 }
-
-@utility uw-heading {
-  @apply font-heading text-[clamp(1.875rem,1.25rem+1.563vw,2.75rem)] leading-none tracking-wider;
-}
