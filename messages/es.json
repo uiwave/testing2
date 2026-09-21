@@ -27,7 +27,22 @@
     "about": {
       "badge": "Sobre nosotros",
       "title": "Descubre el mundo viaja inteligente con nosotros",
-      "description": "Combinamos experiencia local y tecnología para que cada viaje por Perú sea simple, seguro y memorable de principio a fin."
+      "description": "Combinamos experiencia local y tecnología para que cada viaje por Perú sea simple, seguro y memorable de principio a fin.",
+      "cta": "Más sobre nosotros",
+      "features": {
+        "personalizedPlanning": {
+          "title": "Planificación de Viajes Personalizada",
+          "description": "Diseñamos cada itinerario a tu medida, combinando tus intereses con los mejores destinos de Perú."
+        },
+        "expertGuides": {
+          "title": "Guías Locales Expertos",
+          "description": "Acompañamiento con profesionales apasionados por la cultura, historia y rincones ocultos."
+        },
+        "uniqueExperiences": {
+          "title": "Experiencias Únicas",
+          "description": "Acceso exclusivo a actividades gastronómicas, de aventura y turismo vivencial auténtico."
+        }
+      }
     },
     "popular_tour": {
       "badge": "No te pierdas",
@@ -40,13 +55,26 @@
     },
     "testimonial": {
       "badge": "Lo que dicen",
-      "title": "Testimonios de Nuestros Viajeros",
-      "description": "Las experiencias de quienes ya viajaron con nosotros hablan por sí solas. Historias reales, momentos únicos y recuerdos que duran para siempre."
+      "title": "Testimonios de Nuestros Viajeros"
     }
   },
   "tours": {
     "hero": {
       "title": "Nuestros Tours"
+    },
+    "filter": {
+      "destination": {
+        "label": "Destino",
+        "placeholder": "¿A dónde viajas?"
+      },
+      "duration": {
+        "label": "Días",
+        "placeholder": "Duración del tour"
+      },
+      "buttons": {
+        "clear": "Limpiar filtros",
+        "search": "Buscar Tours"
+      }
     }
   }
 }

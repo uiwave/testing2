@@ -3,7 +3,6 @@
 import { Suspense, useEffect, useState } from "react";
 import { cn } from "cn";
 import { Menu } from "lucide-react";
-import TopBar from "./TopBar";
 import DesktopNavigation from "./DesktopNavigation";
 import LanguageSelector from "./LanguageSelector";
 import MobileDrawer from "./MobileDrawer";
@@ -26,11 +25,9 @@ export function Header() {
       <header
         className={cn(
           "fixed top-0 right-0 left-0 z-50 border-b border-white/10 transition-all duration-300",
-          scrolled ? "bg-background shadow-lg" : "bg-black/20 backdrop-blur-md",
+          scrolled ? "bg-background" : "bg-black/20 backdrop-blur-md",
         )}
       >
-        <TopBar scrolled={scrolled} />
-
         <div className="uw-container">
           <div className="grid h-20 w-full grid-cols-3 items-center">
             <div className="flex items-center justify-start">

@@ -103,7 +103,7 @@ export function Footer() {
             <QuickLinksColumn />
           </div>
 
-          <p className="font-heading mt-10 text-center text-[clamp(4.688rem,-9.821rem+36.272vw,25rem)] leading-none select-none">
+          <p className="font-heading from-primary mt-10 bg-linear-to-b to-white bg-clip-text text-center text-[clamp(4.688rem,-9.821rem+36.272vw,25rem)] leading-none text-transparent">
             VIAJEROS
           </p>
         </div>

@@ -6,21 +6,18 @@ import { useTranslations } from "next-intl";
 const FEATURES = [
   {
     icon: Compass,
-    title: "Planificación de Viajes Personalizada",
-    description:
-      "Diseñamos cada itinerario a tu medida, combinando tus intereses con los mejores destinos de Perú.",
+    title: "features.personalizedPlanning.title",
+    description: "features.personalizedPlanning.description",
   },
   {
     icon: MapPin,
-    title: "Guías Locales Expertos",
-    description:
-      "Acompañamiento con profesionales apasionados por la cultura, historia y rincones ocultos.",
+    title: "features.expertGuides.title",
+    description: "features.expertGuides.description",
   },
   {
     icon: Sparkles,
-    title: "Experiencias Únicas",
-    description:
-      "Acceso exclusivo a actividades gastronómicas, de aventura y turismo vivencial auténtico.",
+    title: "features.uniqueExperiences.title",
+    description: "features.uniqueExperiences.description",
   },
 ];
 
@@ -80,10 +77,10 @@ export default function AboutSection() {
 
                       <div className="flex flex-col gap-1.5 pt-0.5">
                         <h3 className="font-heading group-hover:text-primary text-xl tracking-wide text-white transition-colors duration-300 sm:text-2xl">
-                          {feature.title}
+                          {t(feature.title)}
                         </h3>
                         <p className="text-sm leading-relaxed sm:text-base">
-                          {feature.description}
+                          {t(feature.description)}
                         </p>
                       </div>
                     </div>
@@ -96,7 +93,7 @@ export default function AboutSection() {
               href=""
               className="bg-primary text-primary-foreground font-heading inline-flex items-center gap-2 rounded-lg px-6 py-3 text-base tracking-wider"
             >
-              Más sobre nosotros
+              {t("cta")}
               <ArrowUpRight className="size-4" />
             </Link>
           </div>

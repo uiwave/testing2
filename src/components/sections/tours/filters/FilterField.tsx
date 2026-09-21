@@ -1,4 +1,4 @@
-import type { LucideIcon } from "lucide-react";
+import { ChevronDown, type LucideIcon } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -25,26 +25,31 @@ export function FilterField({
   options,
 }: FilterFieldProps) {
   return (
-    <div className="group lg:border-border relative flex flex-col gap-2 px-5 py-4 lg:flex-1 lg:border-r">
+    <div className="group relative flex flex-col gap-2 px-5 py-4 lg:flex-1">
       <div className="flex items-center gap-2">
-        <Icon className="text-primary size-4 shrink-0" />
-        <span className="font-heading text-primary text-xs tracking-[3px] uppercase">
+        <Icon className="text-primary size-6 shrink-0" />
+        <span className="font-heading text-2xl tracking-[1px] text-white">
           {label}
         </span>
       </div>
-      <Select value={value || undefined} onValueChange={onValueChange}>
-        <SelectTrigger className="border-border hover:border-primary/60 [&>svg]:text-primary flex h-auto w-full cursor-pointer items-center justify-between gap-2 rounded-lg border bg-white/5 px-4 py-3 text-sm text-white/50 transition-colors focus:ring-0 focus:ring-offset-0 data-placeholder:text-white/50 [&>svg]:size-4 [&>svg]:opacity-100">
-          <SelectValue placeholder={placeholder} />
-        </SelectTrigger>
-        <SelectContent className="border-border bg-zinc-900 text-white">
-          <SelectItem value="todos">Todos</SelectItem>
+      <div className="relative w-full">
+        <select
+          value={value ?? ""}
+          onChange={(e) => onValueChange(e.target.value)}
+          className="flex h-auto w-full cursor-pointer appearance-none items-center justify-between gap-2 rounded-sm border border-white/10 px-4 py-3 text-base font-extralight text-white transition-colors focus:ring-0 focus:outline-none [&>option]:bg-white [&>option]:text-black"
+        >
+          <option value="" disabled hidden>
+            {placeholder}
+          </option>
+          <option value="todos">Todos</option>
           {options.map((option) => (
-            <SelectItem key={option.value} value={option.value}>
+            <option key={option.value} value={option.value}>
               {option.label}
-            </SelectItem>
+            </option>
           ))}
-        </SelectContent>
-      </Select>
+        </select>
+        <ChevronDown className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-white opacity-100" />
+      </div>
     </div>
   );
 }

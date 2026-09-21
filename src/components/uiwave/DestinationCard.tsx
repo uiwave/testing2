@@ -1,3 +1,4 @@
+import { ROUTES } from "@/config/routes";
 import { Link } from "@/i18n/navigation";
 import { Destination } from "@/types/Destination";
 
@@ -8,7 +9,7 @@ interface Props {
 export function DestinationCard({ data }: Props) {
   return (
     <Link
-      href={`/tours?destino=${data.slug}`}
+      href={`/${ROUTES.TOURS}?destino=${data.slug}`}
       className="group bg-card border-border flex w-full flex-col overflow-hidden rounded-2xl border"
     >
       <div className="relative aspect-4/4 w-full overflow-hidden">
