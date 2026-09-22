@@ -22,6 +22,21 @@
     "Gastos personales",
     "Propinas"
   ],
+  "recommendations": [
+    "Llevar pasaporte original o documento de identidad vigente utilizado en la reserva.",
+    "Usar calzado cómodo o zapatillas de trekking con buen agarre.",
+    "Llevar ropa ligera para el día y un abrigo o casaca cortavientos para la tarde.",
+    "Cargar un impermeable o poncho de lluvia (especialmente entre noviembre y abril).",
+    "Usar bloqueador solar, sombrero para el sol y repelente para mosquitos.",
+    "Llevar dinero en efectivo en soles para compras locales o snacks."
+  ],
+  "additional": [
+    "Los horarios de trenes están sujetos a disponibilidad al momento de confirmar la reserva.",
+    "El boleto de ingreso a Machu Picchu es personal e intransferible.",
+    "No se permite el ingreso con mochilas grandes que superen los 40x35x20 cm.",
+    "Está prohibido el uso de bastones de punta metálica dentro del santuario histórico.",
+    "Se recomienda reservar con al menos 2 a 3 meses de anticipación debido al límite de aforo diario."
+  ],
   "itinerary": [
     {
       "day": 1,
