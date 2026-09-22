@@ -10,6 +10,7 @@ import { Clock } from "lucide-react";
 interface Props {
   itinerary: TourItinerary[];
 }
+
 export default function TourItinerary({ itinerary }: Props) {
   return (
     <Accordion type="single" collapsible className="w-full">
@@ -21,17 +22,17 @@ export default function TourItinerary({ itinerary }: Props) {
         >
           <AccordionTrigger className="font-heading group py-4 text-left hover:no-underline">
             <div className="flex items-center gap-4">
-              <span className="bg-primary/20 text-primary group-hover:bg-primary flex size-10 shrink-0 items-center justify-center rounded-lg text-sm font-bold transition-colors group-hover:text-white">
+              <span className="bg-primary/20 text-primary group-hover:bg-primary group-hover:text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-lg text-xl transition-colors">
                 D{day.day}
               </span>
-              <span className="group-hover:text-primary text-lg font-semibold text-white transition-colors sm:text-xl">
+              <span className="group-hover:text-primary text-lg leading-none text-white transition-colors sm:text-xl">
                 {day.title}
               </span>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="space-y-6 pt-2 pb-6 pl-14 text-base">
+          <AccordionContent className="space-y-6 pt-3 pb-6 pl-14 text-base">
             {day.description && (
-              <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
+              <p className="text-foreground text-base leading-relaxed sm:text-lg">
                 {day.description}
               </p>
             )}
@@ -47,12 +48,12 @@ export default function TourItinerary({ itinerary }: Props) {
                           {activity.time}
                         </span>
                       )}
-                      <h4 className="text-base font-bold text-white sm:text-lg">
+                      <h4 className="text-foreground text-base font-semibold sm:text-lg">
                         {activity.title}
                       </h4>
                     </div>
                     {activity.description && (
-                      <p className="text-sm leading-relaxed text-slate-400 sm:text-base">
+                      <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">
                         {activity.description}
                       </p>
                     )}

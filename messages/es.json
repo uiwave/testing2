@@ -76,5 +76,25 @@
         "search": "Buscar Tours"
       }
     }
+  },
+  "booking": {
+    "bookNow": "Reservar por WhatsApp",
+    "persons": "Personas",
+    "decrease": "Reducir cantidad",
+    "increase": "Aumentar cantidad",
+    "unitPrice": "Precio por persona",
+    "perPerson": "por persona",
+    "total": "Total",
+    "pricePerPerson": "Precio por persona",
+    "whatsappHint": "Al hacer click en reservar se abrirá WhatsApp con tu pedido.",
+    "whatsapp": {
+      "header": "Hola, quiero reservar el tour:",
+      "tour": "Tour: {tour}",
+      "destination": "Destino: {destination}",
+      "duration": "Duración: {duration}",
+      "quantity": "Personas: {quantity}",
+      "unitPrice": "Precio por persona: S/ {price}",
+      "total": "Total estimado: S/ {total}"
+    }
   }
 }

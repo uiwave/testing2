@@ -43,5 +43,25 @@
       "title": "Testimonials from Our Travelers",
       "description": "The experiences of those who have already traveled with us speak for themselves. Real stories, unique moments and memories that last forever."
     }
+  },
+  "booking": {
+    "bookNow": "Book via WhatsApp",
+    "persons": "People",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "unitPrice": "Unit price",
+    "perPerson": "per person",
+    "total": "Total",
+    "pricePerPerson": "Price per person",
+    "whatsappHint": "Clicking book will open WhatsApp with your order.",
+    "whatsapp": {
+      "header": "Hi, I would like to book the tour:",
+      "tour": "Tour: {tour}",
+      "destination": "Destination: {destination}",
+      "duration": "Duration: {duration}",
+      "quantity": "People: {quantity}",
+      "unitPrice": "Price per person: S/ {price}",
+      "total": "Estimated total: S/ {total}"
+    }
   }
 }

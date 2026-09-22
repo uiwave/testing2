@@ -7,13 +7,6 @@ import {
   isLocale,
   type Locale,
 } from "@/i18n/tours";
-import { Check, X, Compass, Info, Clock } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import TourDesciption from "@/components/sections/tour-detail/TourDesciption";
 import TourItinerary from "@/components/sections/tour-detail/TourItinerary";
@@ -50,13 +43,13 @@ export default async function TourDetailPage({ params }: Props) {
     <>
       <PageHero title={tour.title} image={tour.image} />
 
-      <div className="uw-container uw-section py-12 lg:py-16">
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="space-y-12 lg:col-span-8">
+      <div className="uw-container uw-section py-10 lg:py-14">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-8">
             <Tabs defaultValue="description" className="w-full">
               <TabsList
                 variant="line"
-                className="mb-8 flex w-full border-b border-white/10"
+                className="border-border mb-10 flex w-full border-b"
               >
                 {tour.description && (
                   <TabsTrigger value="description">Descripción</TabsTrigger>
@@ -78,7 +71,7 @@ export default async function TourDetailPage({ params }: Props) {
               </TabsList>
 
               {tour.description && (
-                <TabsContent value="description">
+                <TabsContent value="description" className="space-y-10">
                   <TourDesciption description={tour.description} />
                   {tour.images && tour.images.length > 0 && (
                     <TourGallery data={tour.images} />
@@ -94,7 +87,7 @@ export default async function TourDetailPage({ params }: Props) {
 
               {tour.includes && tour.notIncludes && (
                 <TabsContent value="includes">
-                  <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
                     <TourInclude data={tour.includes} />
                     <TourNotInclude data={tour.notIncludes} />
                   </div>

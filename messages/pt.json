@@ -43,5 +43,25 @@
       "title": "Depoimentos dos Nossos Viajantes",
       "description": "As experiências de quem já viajou conosco falam por si. Histórias reais, momentos únicos e recordações que duram para sempre."
     }
+  },
+  "booking": {
+    "bookNow": "Reservar via WhatsApp",
+    "persons": "Pessoas",
+    "decrease": "Diminuir quantidade",
+    "increase": "Aumentar quantidade",
+    "unitPrice": "Preço por pessoa",
+    "perPerson": "por pessoa",
+    "total": "Total",
+    "pricePerPerson": "Preço por pessoa",
+    "whatsappHint": "Ao clicar em reservar, o WhatsApp abrirá com seu pedido.",
+    "whatsapp": {
+      "header": "Olá, quero reservar o tour:",
+      "tour": "Tour: {tour}",
+      "destination": "Destino: {destination}",
+      "duration": "Duração: {duration}",
+      "quantity": "Pessoas: {quantity}",
+      "unitPrice": "Preço por pessoa: S/ {price}",
+      "total": "Total estimado: S/ {total}"
+    }
   }
 }

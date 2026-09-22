@@ -1,130 +1,118 @@
-import { Tour } from "@/types/Tour";
+"use client";
+
+import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Minus, Plus, Users, Clock3, MapPin } from "lucide-react";
+import type { Tour } from "@/types/Tour";
 
 interface Props {
   tour: Tour;
 }
 
+const WHATSAPP_NUMBER = "51926086982";
+const MAX_QUANTITY = 10;
+
 export default function TourInfoSection({ tour }: Props) {
+  const t = useTranslations("booking");
+  const [quantity, setQuantity] = useState(1);
+
+  const unitPrice = tour.price;
+  const total = unitPrice * quantity;
+
+  const buildWhatsAppMessage = () => {
+    const lines = [
+      t("whatsapp.header"),
+      "",
+      t("whatsapp.tour", { tour: tour.title }),
+      t("whatsapp.destination", { destination: tour.destination }),
+      t("whatsapp.duration", { duration: tour.duration }),
+      t("whatsapp.quantity", { quantity }),
+      t("whatsapp.unitPrice", { price: unitPrice }),
+      t("whatsapp.total", { total }),
+    ];
+    return encodeURIComponent(lines.join("\n"));
+  };
+
+  const handleBook = () => {
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${buildWhatsAppMessage()}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
-    <div className="border-border w-full rounded-2xl border p-6 text-white sm:p-8">
-      <h2 className="font-heading mb-2 text-lg tracking-wider text-white">
-        TOUR BOOKING
+    <div className="bg-card border-border rounded-2xl border p-6 sm:p-8">
+      <h2 className="font-heading text-2xl leading-[0.95] text-white sm:text-3xl">
+        {tour.title}
       </h2>
-      <div className="bg-primary mb-6 h-0.5 w-12" />
-      <form className="space-y-6">
-        <div className="border-border flex items-center justify-between border-b pb-6">
-          <label
-            htmlFor="from-date"
-            className="font-heading text-sm tracking-wider text-white"
-          >
-            From Date:
-          </label>
-          <input
-            id="from-date"
-            type="date"
-            className="border-border rounded-sm border px-3 py-3 text-sm text-white"
-          />
-        </div>
+      <div className="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm">
+        <span className="inline-flex items-center gap-1.5">
+          <MapPin className="text-primary size-3.5" />
+          {tour.destination}
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <Clock3 className="text-primary size-3.5" />
+          {tour.duration}
+        </span>
+      </div>
 
-        <div className="border-border flex items-center justify-between border-b pb-6">
-          <span className="font-heading text-sm tracking-wider text-white">
-            Time:
+      <div className="bg-background border-border mt-5 flex items-center justify-between rounded-xl border px-4 py-3.5">
+        <span className="text-muted-foreground flex items-center gap-2 text-sm">
+          <Users className="size-4" />
+          {t("persons")}
+        </span>
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            aria-label={t("decrease")}
+            disabled={quantity <= 1}
+            onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+            className="border-border bg-card hover:border-primary focus:ring-primary/20 group text-foreground flex size-9 items-center justify-center rounded-lg border transition-colors focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            <Minus className="size-4" />
+          </button>
+          <span className="font-heading min-w-8 text-center text-2xl leading-none text-white">
+            {quantity}
           </span>
-          <div className="flex items-center gap-6">
-            <label className="flex cursor-pointer items-center gap-2 text-sm">
-              <input
-                type="radio"
-                name="tour-time"
-                value="12:00"
-                className="border-border h-4 w-4 cursor-pointer appearance-none rounded-none border"
-              />
-              <span className="text-white">12:00</span>
-            </label>
-            <label className="flex cursor-pointer items-center gap-2 text-sm">
-              <input
-                type="radio"
-                name="tour-time"
-                value="10:00"
-                className="border-border h-4 w-4 cursor-pointer appearance-none rounded-none border"
-              />
-              <span className="text-white">10:00</span>
-            </label>
-          </div>
-        </div>
-
-        <div className="border-border border-b pb-6">
-          <label
-            htmlFor="tickets-select"
-            className="font-heading mb-2 block text-sm tracking-wider text-white"
+          <button
+            type="button"
+            aria-label={t("increase")}
+            disabled={quantity >= MAX_QUANTITY}
+            onClick={() => setQuantity((q) => Math.min(MAX_QUANTITY, q + 1))}
+            className="border-border bg-card hover:border-primary focus:ring-primary/20 group text-foreground flex size-9 items-center justify-center rounded-lg border transition-colors focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Tickets
-          </label>
-          <select
-            id="tickets-select"
-            className="bg-card border-border focus:ring-primary/20 w-full rounded-lg border px-4 py-2.5 text-sm text-white focus:ring-2 focus:outline-none"
-          >
-            <option value="" disabled>
-              Select Quantity
-            </option>
-            <option value="1">1 Ticket</option>
-            <option value="2">2 Tickets</option>
-            <option value="3">3 Tickets</option>
-            <option value="4">4 Tickets</option>
-          </select>
+            <Plus className="size-4" />
+          </button>
         </div>
+      </div>
 
-        <div className="border-border border-b pb-6">
-          <span className="font-heading mb-3 block text-sm tracking-wider text-white">
-            Add Extra:
-          </span>
-          <div className="space-y-3">
-            <label className="flex cursor-pointer items-center justify-between text-sm">
-              <div className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  className="border-border text-primary h-4 w-4 rounded focus:ring-0"
-                />
-                <span className="text-white">Add service per booking</span>
-              </div>
-              <span className="font-medium text-white">$45</span>
-            </label>
+      <div className="mt-3 flex items-center justify-between text-sm">
+        <span className="text-muted-foreground">{t("unitPrice")}</span>
+        <span className="text-foreground font-medium">
+          S/ {unitPrice} {t("perPerson")}
+        </span>
+      </div>
 
-            <label className="flex cursor-pointer items-center justify-between text-sm">
-              <div className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  className="border-border text-primary h-4 w-4 rounded focus:ring-0"
-                />
-                <span className="text-white">Add service per personal</span>
-              </div>
-              <span className="font-medium text-white">$35</span>
-            </label>
-          </div>
-        </div>
+      <div className="border-border mt-5 border-t" />
 
-        <div className="flex items-center justify-between pt-2">
-          <span className="font-heading text-base tracking-wider text-white">
-            Total:
-          </span>
-          <span className="font-heading text-xl text-white">150</span>
-        </div>
+      <div className="flex items-center justify-between">
+        <span className="font-heading text-lg tracking-wider text-white sm:text-xl">
+          {t("total")}
+        </span>
+        <span className="font-heading text-primary text-2xl leading-none sm:text-3xl">
+          S/ {total}
+        </span>
+      </div>
 
-        <button
-          type="submit"
-          className="bg-primary text-primary-foreground hover:bg-primary/90 font-heading w-full rounded-xl px-4 py-3.5 text-sm tracking-wider transition duration-200"
-        >
-          Book Now
-        </button>
+      <button
+        type="button"
+        onClick={handleBook}
+        className="bg-primary text-primary-foreground font-heading hover:bg-primary/90 mt-5 w-full cursor-pointer rounded-xl px-4 py-4 text-base leading-none tracking-wider transition-colors"
+      >
+        {t("bookNow")}
+      </button>
 
-        <div className="pt-2 text-center">
-          <a
-            href="#help"
-            className="text-muted-foreground hover:text-foreground text-xs underline-offset-2 transition duration-150 hover:underline"
-          >
-            Need Some Help?
-          </a>
-        </div>
-      </form>
+      <p className="text-muted-foreground mt-3 text-center text-xs leading-relaxed">
+        {t("whatsappHint")}
+      </p>
     </div>
   );
 }
