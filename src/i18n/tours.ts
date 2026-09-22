@@ -3,19 +3,7 @@ import { routing } from "./routing";
 
 export type Locale = (typeof routing.locales)[number];
 
-const TOUR_SLUGS = [
-  "tour-a-machu-picchu",
-  "colca-canyon",
-  "lago-titicaca",
-  "huacachina-buggy",
-  "valle-sagrado",
-  "aguas-termales",
-  "islas-flotantes",
-  "bodegas-ica",
-  "rainbow-mountain",
-  "sillar-blanco",
-  "city-tour-cusco",
-] as const;
+const TOUR_SLUGS = ["tour-a-machu-picchu"] as const;
 
 export type TourSlug = (typeof TOUR_SLUGS)[number];
 

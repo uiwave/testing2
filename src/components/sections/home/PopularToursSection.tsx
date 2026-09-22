@@ -34,7 +34,7 @@ export default function PopularToursSection({ tours }: Props) {
                 key={tour.slug}
                 className="basis-full pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
-                <TourCard data={tour} />
+                <TourCard data={tour} destination={true} />
               </CarouselItem>
             ))}
           </CarouselContent>

@@ -1,9 +1,10 @@
 {
   "slug": "tour-a-machu-picchu",
-  "destination": "CUSCO",
+  "destination": "Cusco",
   "image": "/images/Tour-a-Machu-Picchu-03.webp",
   "title": "Machu Picchu",
   "price": 300,
+  "type": "Cultural",
   "duration": "Full Day",
   "popular": true,
   "description": "Descubre la majestuosidad de Machu Picchu, la ciudadela inca más emblemática del mundo. Este tour de día completo te lleva desde Cusco hasta la cumbre de los Andes, recorriendo el valle sagrado en tren turístico para explorar sus templos, terrazas agrícolas y la energía única de este sitio Patrimonio de la Humanidad.",

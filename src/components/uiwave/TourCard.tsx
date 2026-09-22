@@ -4,17 +4,20 @@ import { Clock } from "lucide-react";
 
 interface Props {
   data: Tour;
+  destination?: boolean;
 }
 
-export default function TourCard({ data }: Props) {
+export default function TourCard({ data, destination = false }: Props) {
   return (
     <Link
       href={`/tours/${data.slug}`}
       className="group bg-card border-border flex h-full w-full flex-col gap-3 overflow-hidden rounded-2xl border p-5"
     >
-      <span className="font-heading text-primary mb-3.75 text-center text-[3.125rem] leading-none tracking-widest">
-        {data.destination}
-      </span>
+      {destination && (
+        <span className="font-heading text-primary mb-3.75 text-center text-[3.125rem] leading-none tracking-widest">
+          {data.destination}
+        </span>
+      )}
 
       <div className="relative aspect-video w-full overflow-hidden rounded-xl">
         <img
