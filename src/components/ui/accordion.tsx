@@ -47,8 +47,10 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <ChevronDownIcon data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <ChevronUpIcon data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        <span className="ml-auto flex size-6 shrink-0 items-center justify-center rounded-xs bg-primary text-white">
+          <ChevronDownIcon className="pointer-events-none size-3 shrink-0 group-aria-expanded/accordion-trigger:hidden" />
+          <ChevronUpIcon className="pointer-events-none hidden size-3 shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        </span>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )

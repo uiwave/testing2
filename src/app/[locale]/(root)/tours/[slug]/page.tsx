@@ -72,25 +72,73 @@ export default async function TourDetailPage({ params }: Props) {
               </div>
             )}
             {tour.itinerary && (
-              <>
-                <div>
-                  <h2 className="font-heading mb-5.5 text-[2rem] leading-[1.2] text-white">
-                    Itinerario
-                  </h2>
-                  <Accordion type="single" collapsible className="w-full">
-                    {tour.itinerary.map((day) => (
-                      <AccordionItem key={day.day} value={`day-${day.day}`}>
-                        <AccordionTrigger className="font-heading text-left text-base text-white">
-                          Día {day.day}: {day.title}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-sm leading-relaxed text-white/80">
-                          {day.description}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </div>
-              </>
+              <div>
+                <h2 className="font-heading mb-5.5 text-[2rem] leading-[1.2] text-white">
+                  Itinerario
+                </h2>
+                <Accordion
+                  type="single"
+                  collapsible
+                  className="w-full space-y-3"
+                >
+                  {tour.itinerary.map((day) => (
+                    <AccordionItem
+                      key={day.day}
+                      value={`day-${day.day}`}
+                      className="border-white/10 not-last:border-b"
+                    >
+                      <AccordionTrigger className="font-heading py-4 text-left text-base text-white hover:no-underline">
+                        <div className="flex items-center gap-3">
+                          <div className="bg-primary flex size-8 shrink-0 items-center justify-center rounded-sm text-sm font-semibold text-white">
+                            {day.day}
+                          </div>
+                          <span className="text-[1.25rem]">{day.title}</span>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="space-y-4 pb-4 text-base">
+                        {/* Descripción general del día */}
+                        {day.description && (
+                          <p className="leading-relaxed text-white/80">
+                            {day.description}
+                          </p>
+                        )}
+
+                        {/* Desglose de actividades/horarios si existen */}
+                        {day.activities && day.activities.length > 0 && (
+                          <div className="border-primary/30 mt-4 space-y-3 border-l-2 pl-4">
+                            {day.activities.map((activity, index) => (
+                              <div
+                                key={index}
+                                className="relative flex flex-col gap-1"
+                              >
+                                {/* Indicador visual de la actividad */}
+                                <div className="bg-primary absolute top-1.5 -left-5.25 size-2.5 rounded-full" />
+
+                                <div className="flex items-center gap-2">
+                                  {activity.time && (
+                                    <span className="bg-primary/10 text-primary rounded px-2 py-0.5 text-xs font-semibold">
+                                      {activity.time}
+                                    </span>
+                                  )}
+                                  <h4 className="text-sm font-semibold text-white">
+                                    {activity.title}
+                                  </h4>
+                                </div>
+
+                                {activity.description && (
+                                  <p className="text-sm leading-normal text-white/70">
+                                    {activity.description}
+                                  </p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
             )}
             {tour.includes && tour.notIncludes && (
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
